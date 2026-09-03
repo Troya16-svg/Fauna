@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SANTUARIO DE LA NATURALEZA HUMEDALES
+DE LA CUENCA DE CHEPU - FAUNA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>¿Qué animal coincide con la silueta?</h1>
+
+    <!-- Barra de progreso -->
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <!-- Silueta -->
+    <div id="silhouette-card">
+        <img id="silhouette" src="">
+    </div>
+
+    <!-- Opciones -->
+    <div id="options" class="options"></div>
+    
+    <!-- Mensaje -->
+    <p id="message"></p>
+
+    <!-- Animal correcto -->
+   <div id="correct-animal" class="hidden">
+    <img id="correct-img" src="">
+    <p id="correct-name"></p>
+    <p id="correct-scientific"></p>
+    </div>
+
+    <!-- Botón siguiente -->
+    <button id="nextBtn">Siguiente</button>
+
+    <!-- Pantalla final -->
+    <div id="final-screen" class="hidden">
+        <h2>¡Juego completado!</h2>
+        <p id="final-score"></p>
+        <button id="restartBtn">Volver a jugar</button>
+    </div>
+
+    <!-- Confeti -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="main.js"></script>
+
+
+</body>
+</html>

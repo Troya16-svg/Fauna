@@ -1,0 +1,211 @@
+/* ======== ESTILOS GENERALES ======== */
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    background: #fafafa;
+    margin: 0;
+    padding: 10px;
+    color: rgb(132, 136, 0);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: rgb(132, 136, 0);
+}
+
+/* ======== BARRA DE PROGRESO ======== */
+
+#progress-container {
+    width: 80%;
+    height: 12px;
+    background: #e5e5e5;
+    border-radius: 6px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #4ade80;
+    transition: width 0.3s ease;
+}
+
+/* ======== SILUETA ======== */
+
+#silhouette-card {
+    width: 750px;
+    height: 750px;
+    margin: 20px auto;
+    background: #f3f3f3;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#silhouette {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ======== OPCIONES ======== */
+
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.option {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f3f3f3;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.option img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.option:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ======== MENSAJE ======== */
+
+#message {
+    font-size: 40px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: chocolate;
+    
+}
+
+/* ======== BOTÓN SIGUIENTE ======== */
+
+#nextBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    background: #4ade80;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    display: none;
+}
+
+#nextBtn:hover {
+    background: #026b28;
+}
+
+/* ======== PANTALLA FINAL ======== */
+
+#final-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(250,250,250,0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 22px;
+    backdrop-filter: blur(4px);
+    z-index: 10;
+}
+
+/* CLAVE: esto permite ocultar la pantalla final */
+.hidden {
+    display: none !important;
+}
+
+/* ======== BOTÓN REINICIAR ======== */
+
+#restartBtn {
+    padding: 12px 24px;
+    font-size: 20px;
+    border: none;
+    background: #4ade80;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#restartBtn:hover {
+    background: #22c55e;
+}
+
+/* ======== CONFETI ======== */
+
+#confetti-canvas {
+    display: none;
+    position: fixed;     /* ← IMPORTANTE */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;       /* ← PARA QUE SE VEA */
+    }
+
+/* ======== Correct Animal ======== */
+
+#correct-animal {
+    margin-top: 100px;
+}
+
+#correct-img {
+    width:750px;
+    height: 750px;
+    object-fit: contain;
+    margin-bottom: -50px;
+}
+
+#correct-name {
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+#correct-scientific {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: -50px;
+}
+
+/* ======== Animation Animal ======== */
+
+.correct-zoom {
+    animation: zoomIn 0.4s ease forwards;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
