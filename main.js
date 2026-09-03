@@ -1,23 +1,23 @@
 // Lista de animales con nombre común + científico + foto + silueta
 const animalsData = [
-  { name: "Huillín", scientific: "(Lontra provocax)", photo: "Huillin.png", shape: "Huillin.png" },
-  { name: "Sapo esmeralda de la selva", scientific: "(Hylorina sylvatica)", photo: "RanaEsmeralda.png", shape: "RanaEsmeralda.png" },
-  { name: "Churrete", scientific: "(Cinclodes patagonicus)", photo: "Churrete.png", shape: "Churrete.png" },
-  { name: "Abejorro chileno", scientific: "(Bombus dahlbomii)", photo: "Abejorro.png", shape: "Abejorro.png" },
-  { name: "Garza blanca grande", scientific: "(Ardea alba)", photo: "Garza.png", shape: "Garza.png" },
-  { name: "Ranita de Darwin", scientific: "(Rhinoderma darwinii)", photo: "RanitaDeDarwin.png", shape: "RanitaDeDarwin.png" },
-  { name: "Martín pescador", scientific: "(Megaceryle torquata)", photo: "MartinPescador.png", shape: "MartinPescador.png" },
-  { name: "Chuncho", scientific: "(Glaucidium nana)", photo: "Chuncho.png", shape: "Chuncho.png" },
-  { name: "Fío-fío", scientific: "(Elaenia albiceps)", photo: "FioFio.png", shape: "FioFio.png" },
-  { name: "Coliguacho", scientific: "(Osca lata)", photo: "Coliguacho.png", shape: "Coliguacho.png" },
-  { name: "Rana moteada", scientific: "(Batrachyla leptopus)", photo: "RanaMoteada.png", shape: "RanaMoteada.png" },
-  { name: "Rana de hojarasca austral", scientific: "(Eupsophus calcaratus)", photo: "RanaDeHojarasca.png", shape: "RanaDeHojarasca.png" },
-  { name: "Pilpilén", scientific: "(Haematopus palliatus)", photo: "Pilpilen.png", shape: "Pilpilen.png" },
-  { name: "Pudú", scientific: "(Pudu puda)", photo: "Pudu.png", shape: "Pudu.png" },
-  { name: "Chucao", scientific: "(Scelorchilus rubecula)", photo: "Chucao.png", shape: "Chucao.png" },
-  { name: "Zorro chilote", scientific: "(Lycalopex fulvipes)", photo: "ZorroChilote.png", shape: "ZorroChilote.png" },
-  { name: "Hadita del bosque", scientific: "(Sphictostethus gravesii)", photo: "HaditaDelBosque.png", shape: "HaditaDelBosque.png" },
-  { name: "Sapito de antifaz", scientific: "(Batrachyla taeniata)", photo: "SapitoDeAntifaz.png", shape: "SapitoDeAntifaz.png" }
+  { name: "Huillín", question: "¿sabes que anfibio está en estado crítico de extinción?", scientific: "(Lontra provocax)", photo: "Huillin.png", shape: "Huillin.png" },
+  { name: "Sapo esmeralda de la selva", question: "¿Qué anfibio de color esmeralda corresponde a esta silueta?", scientific: "(Hylorina sylvatica)", photo: "RanaEsmeralda.png", shape: "RanaEsmeralda.png" },
+  { name: "Churrete", question: "¿Qué ave se reconoce por esta silueta?", scientific: "(Cinclodes patagonicus)", photo: "Churrete.png", shape: "Churrete.png" },
+  { name: "Abejorro chileno", question: "¿Qué insecto nativo corresponde a esta silueta?", scientific: "(Bombus dahlbomii)", photo: "Abejorro.png", shape: "Abejorro.png" },
+  { name: "Garza blanca grande", question: "¿Qué ave zancuda aparece en esta silueta?", scientific: "(Ardea alba)", photo: "Garza.png", shape: "Garza.png" },
+  { name: "Ranita de Darwin", question: "¿Qué pequeña rana corresponde a esta silueta?", scientific: "(Rhinoderma darwinii)", photo: "RanitaDeDarwin.png", shape: "RanitaDeDarwin.png" },
+  { name: "Martín pescador", question: "¿Qué ave asociada a los ríos aparece aquí?", scientific: "(Megaceryle torquata)", photo: "MartinPescador.png", shape: "MartinPescador.png" },
+  { name: "Chuncho", question: "¿Qué pequeña rapaz nocturna corresponde a esta silueta?", scientific: "(Glaucidium nana)", photo: "Chuncho.png", shape: "Chuncho.png" },
+  { name: "Fío-fío", question: "¿Qué ave migratoria corresponde a esta silueta?", scientific: "(Elaenia albiceps)", photo: "FioFio.png", shape: "FioFio.png" },
+  { name: "Coliguacho", question: "¿Qué insecto de alas transparentes aparece en esta silueta?", scientific: "(Osca lata)", photo: "Coliguacho.png", shape: "Coliguacho.png" },
+  { name: "Rana moteada", question: "¿Qué rana moteada corresponde a esta silueta?", scientific: "(Batrachyla leptopus)", photo: "RanaMoteada.png", shape: "RanaMoteada.png" },
+  { name: "Rana de hojarasca austral", question: "¿Qué anfibio del suelo del bosque aparece aquí?", scientific: "(Eupsophus calcaratus)", photo: "RanaDeHojarasca.png", shape: "RanaDeHojarasca.png" },
+  { name: "Pilpilén", question: "¿Qué ave costera corresponde a esta silueta?", scientific: "(Haematopus palliatus)", photo: "Pilpilen.png", shape: "Pilpilen.png" },
+  { name: "Pudú", question: "¿Qué pequeño ciervo nativo aparece en esta silueta?", scientific: "(Pudu puda)", photo: "Pudu.png", shape: "Pudu.png" },
+  { name: "Chucao", question: "¿Qué ave del bosque lluvioso corresponde a esta silueta?", scientific: "(Scelorchilus rubecula)", photo: "Chucao.png", shape: "Chucao.png" },
+  { name: "Zorro chilote", question: "¿Qué cánido endémico aparece en esta silueta?", scientific: "(Lycalopex fulvipes)", photo: "ZorroChilote.png", shape: "ZorroChilote.png" },
+  { name: "Hadita del bosque", question: "¿Qué escarabajo nativo corresponde a esta silueta?", scientific: "(Sphictostethus gravesii)", photo: "HaditaDelBosque.png", shape: "HaditaDelBosque.png" },
+  { name: "Sapito de antifaz", question: "¿Qué sapito con marcas faciales aparece aquí?", scientific: "(Batrachyla taeniata)", photo: "SapitoDeAntifaz.png", shape: "SapitoDeAntifaz.png" }
 ];
 
 let score = 0;
@@ -37,6 +37,7 @@ function generateAnimals() {
 
     return {
       name: animal.name,
+      question: animal.question,
       scientific: animal.scientific,
       silhouette,
       correct,
@@ -79,6 +80,8 @@ function loadAnimal() {
   }
 
   const animal = animals[current];
+
+  document.getElementById("question").innerText = animal.question;
 
   document.getElementById("correct-animal").classList.add("hidden");
   document.getElementById("correct-img").classList.remove("correct-zoom");
