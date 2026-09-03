@@ -28,7 +28,7 @@ h1 {
 
 #progress-bar {
     height: 100%;
-    width: 0%;
+    width: 10%;
     background: #4ade80;
     transition: width 0.3s ease;
 }
@@ -39,7 +39,7 @@ h1 {
     width: 750px;
     height: 750px;
     margin: 20px auto;
-    background: #f3f3f3;
+    background: #6f6b6b;
     border-radius: 12px;
     display: flex;
     justify-content: center;
