@@ -48,7 +48,7 @@ function generateAnimals() {
   });
 }
 
-const animals = generateAnimals();
+let animals = generateAnimals().sort(() => Math.random() - 0.5);
 
 // Barra de progreso
 function updateProgress() {
@@ -128,7 +128,7 @@ function checkAnswer(selected) {
     score++;
 
     document.getElementById("message").innerText = "¡Correcto!";
-    document.getElementById("message").style.color = "#d1530f";
+    document.getElementById("message").style.color = "#00f85f";
 
     document.getElementById("correct-img").src = animal.correct;
 
@@ -147,7 +147,7 @@ function checkAnswer(selected) {
   } else {
     errors++;
     document.getElementById("message").innerText = "Incorrecto!";
-    document.getElementById("message").style.color = "#c62828";
+    document.getElementById("message").style.color = "#b20202a1";
 
     setTimeout(() => {
       current++;
@@ -185,6 +185,7 @@ document.getElementById("restartBtn").onclick = () => {
   score = 0;
   errors = 0;
   answerLocked = false;
+  animals = generateAnimals().sort(() => Math.random() - 0.5);
 
   document.getElementById("final-screen").classList.add("hidden");
   document.getElementById("confetti-canvas").style.display = "none";
