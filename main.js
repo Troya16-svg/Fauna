@@ -128,7 +128,7 @@ function checkAnswer(selected) {
     score++;
 
     document.getElementById("message").innerText = "¡Correcto!";
-    document.getElementById("message").style.color = "#007e2e";
+    document.getElementById("message").style.color = "#03c149";
 
     document.getElementById("correct-img").src = animal.correct;
 
@@ -147,7 +147,7 @@ function checkAnswer(selected) {
   } else {
     errors++;
     document.getElementById("message").innerText = "Incorrecto!";
-    document.getElementById("message").style.color = "#b20202a1";
+    document.getElementById("message").style.color = "#f70808a1";
 
     setTimeout(() => {
       current++;

@@ -26,16 +26,16 @@ body::before {
 
 h1 {
     margin-bottom: 0px;
-    font-size: 6ch;
-    color: rgb(132,);
+    font-size: 60px;
+    color: rgb(132, 136, 0);
     font-weight: Bold;
 }
 
 h2 {
     margin-bottom: 0px;
-    font-size: 40px;
+    font-size: 45px;
     color: rgb(0, 25, 4);
-    font-weight: light;
+    font-weight: lighter;
 }
 
 /* ======== BARRA DE PROGRESO ======== */
