@@ -128,7 +128,7 @@ function checkAnswer(selected) {
     score++;
 
     document.getElementById("message").innerText = "¡Correcto!";
-    document.getElementById("message").style.color = "#00f85f";
+    document.getElementById("message").style.color = "#007e2e";
 
     document.getElementById("correct-img").src = animal.correct;
 
