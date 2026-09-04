@@ -21,7 +21,9 @@ const animalsData = [
 ];
 
 let score = 0;
+let errors = 0;
 let current = 0;
+let answerLocked = false;
 
 // Genera animales con distractores
 function generateAnimals() {
@@ -80,6 +82,7 @@ function loadAnimal() {
   }
 
   const animal = animals[current];
+  answerLocked = false;
 
   document.getElementById("question").innerText = animal.question;
 
@@ -116,7 +119,10 @@ function loadAnimal() {
 
 // Verificar respuesta
 function checkAnswer(selected) {
+  if (answerLocked) return;
+
   const animal = animals[current];
+  answerLocked = true;
 
   if (selected === animal.correct) {
     score++;
@@ -139,7 +145,14 @@ function checkAnswer(selected) {
     document.getElementById("nextBtn").style.display = "inline-block";
 
   } else {
-    document.getElementById("message").innerText = "¡Inténtalo de nuevo!";
+    errors++;
+    document.getElementById("message").innerText = "Incorrecto!";
+    document.getElementById("message").style.color = "#c62828";
+
+    setTimeout(() => {
+      current++;
+      loadAnimal();
+    }, 700);
   }
 }
 
@@ -159,7 +172,7 @@ function showFinalScreen() {
   const total = animals.length;
   const percent = Math.round((score / total) * 100);
 
-  scoreText.innerText = `Tu puntuación: ${score} de ${total} (${percent}%)`;
+  scoreText.innerText = `Tu puntuación: ${score} de ${total} (${percent}%) - Errores: ${errors}`;
 
   final.classList.remove("hidden");
 
@@ -170,6 +183,8 @@ function showFinalScreen() {
 document.getElementById("restartBtn").onclick = () => {
   current = 0;
   score = 0;
+  errors = 0;
+  answerLocked = false;
 
   document.getElementById("final-screen").classList.add("hidden");
   document.getElementById("confetti-canvas").style.display = "none";
