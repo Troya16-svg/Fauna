@@ -68,15 +68,22 @@ function updateProgress() {
 
 // Ocultar UI del juego
 function hideGameUI() {
+  document.querySelector(".game-eyebrow").classList.add("hidden");
+  document.getElementById("Title").classList.add("hidden");
+  document.getElementById("question").classList.add("hidden");
   document.getElementById("silhouette-card").style.display = "none";
   document.getElementById("options").style.display = "none";
   document.getElementById("message").style.display = "none";
+  document.getElementById("correct-animal").classList.add("hidden");
   document.getElementById("nextBtn").style.display = "none";
   document.getElementById("progress-container").style.display = "none";
 }
 
 // Mostrar UI del juego
 function showGameUI() {
+  document.querySelector(".game-eyebrow").classList.remove("hidden");
+  document.getElementById("Title").classList.remove("hidden");
+  document.getElementById("question").classList.remove("hidden");
   document.getElementById("silhouette-card").style.display = "flex";
   document.getElementById("options").style.display = "flex";
   document.getElementById("message").style.display = "block";
@@ -181,7 +188,7 @@ function showFinalScreen() {
   const total = animals.length;
   const percent = Math.round((score / total) * 100);
 
-  scoreText.innerText = `Tu puntuación: ${score} de ${total} (${percent}%) - Errores: ${errors}`;
+  scoreText.innerText = `Tu puntuación:\n${score} de ${total} (${percent}%) - Errores: ${errors}`;
 
   final.classList.remove("hidden");
 
