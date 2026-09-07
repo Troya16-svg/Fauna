@@ -8,12 +8,21 @@
 </head>
 
 <body>
-    
-    <background-image>
-    
-    <h1 id="Title">SANTUARIO DE LA<br> HUMEDALES
-        DE LA CUENCA DE CHEPU</h1>       
-    <h2 id="question">¿Qué animal coincide con la silueta?</h2>
+    <main id="welcome-screen">
+        <div class="welcome-copy">
+            <img class="welcome-logo" src="Images/LogoChepu.png" alt="Logo del Santuario de la cuenca de Chepu">
+            <p class="eyebrow">Fauna nativa de Chiloé</p>
+            <h1>SANTUARIO DE LA NATURALEZA<br>HUMEDALES<br>DE LA CUENCA DE CHEPU</h1>
+            <p class="welcome-text">Conoce a las especies que habitan este humedal y pon a prueba tu mirada identificando sus siluetas.</p>
+            <button id="startBtn" type="button">Comenzar recorrido <span aria-hidden="true">→</span></button>
+        </div>
+        <div class="welcome-image" role="img" aria-label="Paisaje del Santuario de la cuenca de Chepu"></div>
+    </main>
+
+    <main id="game-screen" class="hidden">
+        <p class="eyebrow game-eyebrow">Fauna nativa de Chiloé</p>
+        <h1 id="Title">SANTUARIO DE LOS HUMEDALES<br>DE LA CUENCA DE CHEPU</h1>
+        <h2 id="question">¿Qué animal coincide con la silueta?</h2>
 
     <!-- Barra de progreso -->
     <div id="progress-container">
@@ -22,7 +31,7 @@
 
     <!-- Silueta -->
     <div id="silhouette-card">
-        <img id="silhouette" src="">
+        <img id="silhouette" src="" alt="Silueta del animal por identificar">
     </div>
 
     <!-- Opciones -->
@@ -32,21 +41,22 @@
     <p id="message"></p>
 
     <!-- Animal correcto -->
-   <div id="correct-animal" class="hidden">
-    <img id="correct-img" src="">
+    <div id="correct-animal" class="hidden">
+     <img id="correct-img" src="" alt="Animal identificado">
     <p id="correct-name"></p>
     <p id="correct-scientific"></p>
     </div>
 
     <!-- Botón siguiente -->
-    <button id="nextBtn">Siguiente</button>
+    <button id="nextBtn" type="button">Siguiente</button>
 
     <!-- Pantalla final -->
     <div id="final-screen" class="hidden">
         <h2>¡Juego completado!</h2>
         <p id="final-score"></p>
-        <button id="restartBtn">Volver a jugar</button>
+        <button id="restartBtn" type="button">Volver a jugar</button>
     </div>
+    </main>
 
     <!-- Confeti -->
     <canvas id="confetti-canvas"></canvas>

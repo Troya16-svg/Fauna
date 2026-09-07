@@ -25,6 +25,15 @@ let errors = 0;
 let current = 0;
 let answerLocked = false;
 
+const welcomeScreen = document.getElementById("welcome-screen");
+const gameScreen = document.getElementById("game-screen");
+
+document.getElementById("startBtn").onclick = () => {
+  welcomeScreen.classList.add("hidden");
+  gameScreen.classList.remove("hidden");
+  loadAnimal();
+};
+
 // Genera animales con distractores
 function generateAnimals() {
   return animalsData.map(animal => {
@@ -128,7 +137,7 @@ function checkAnswer(selected) {
     score++;
 
     document.getElementById("message").innerText = "¡Correcto!";
-    document.getElementById("message").style.color = "#03c149";
+    document.getElementById("message").style.color = "#096c00";
 
     document.getElementById("correct-img").src = animal.correct;
 
@@ -240,5 +249,4 @@ function startConfetti() {
   draw();
 }
 
-// Iniciar juego
-loadAnimal();
+// La partida comienza desde la pantalla de bienvenida.

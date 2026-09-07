@@ -1,16 +1,105 @@
 /* ======== ESTILOS GENERALES ======== */
 
 body {
-    font-family: fantasy, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     min-height: 100vh;
     background: linear-gradient(135deg, #d7d7d7 0%, #d8d7d7 100%);
     background-attachment: fixed;
     margin: 0;
     padding: 10px;
-    color: rgb(170, 110, 13);
+    color:darkolivegreen
+}
 
+button {
+    font-family: inherit;
+}
 
+/* ======== PANTALLA DE BIENVENIDA ======== */
+
+#welcome-screen {
+    min-height: calc(100vh - 20px);
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(320px, 0.85fr) minmax(380px, 1.15fr);
+    align-items: center;
+    gap: clamp(35px, 7vw, 100px);
+    text-align: left;
+}
+
+.welcome-copy {
+    padding: 30px 0;
+}
+
+.welcome-logo {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 24px;
+}
+
+.eyebrow {
+    margin: 0 0 16px;
+    color:darkgoldenrod;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#welcome-screen h1 {
+    margin: 0;
+    color:darkolivegreen;
+    font-size: clamp(42px, 5vw, 74px);
+    line-height: 0.98;
+    letter-spacing: -1px;
+}
+
+.welcome-text {
+    max-width: 470px;
+    margin: 28px 0 34px;
+    color:rgb(0, 0, 0);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+#startBtn {
+    padding: 16px 23px;
+    border: 0;
+    border-radius: 4px;
+    background: #d87525;
+    color: white;
+    cursor: pointer;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#startBtn span {
+    margin-left: 12px;
+    font-size: 22px;
+    vertical-align: -1px;
+}
+
+#startBtn:hover {
+    background: #b75b18;
+    transform: translateY(-2px);
+}
+
+.welcome-image {
+    min-height: min(68vh, 650px);
+    border-radius: 4px;
+    background: linear-gradient(180deg, rgba(30, 58, 44, 0.05), rgba(30, 58, 44, 0.28)), url("fotos/Welcomeimage.jpg") center / cover no-repeat;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.game-eyebrow {
+    margin-top: 22px;
 }
 
 body::before {
@@ -26,16 +115,19 @@ body::before {
 
 h1 {
     margin-bottom: 0px;
-    font-size: 60px;
-    color: rgb(132, 136, 0);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: -2px;
+    font-size: 75px;
+    line-height: 1;
     font-weight: Bold;
 }
 
 h2 {
     margin-bottom: 0px;
-    font-size: 45px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 35px;
     color: rgb(0, 25, 4);
-    font-weight: lighter;
+    font-weight: bold;
 }
 
 /* ======== BARRA DE PROGRESO ======== */
@@ -167,6 +259,38 @@ h2 {
     display: none !important;
 }
 
+@media (max-width: 760px) {
+    body {
+        padding: 8px 18px;
+    }
+
+    #welcome-screen {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 34px 0 42px;
+    }
+
+    .welcome-copy {
+        padding: 0;
+    }
+
+    .welcome-logo {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 18px;
+    }
+
+    .welcome-image {
+        min-height: 38vh;
+        order: -1;
+    }
+
+    #welcome-screen h1 {
+        font-size: 45px;
+    }
+}
+
 /* ======== BOTÓN REINICIAR ======== */
 
 #restartBtn {
@@ -219,7 +343,7 @@ h2 {
     font-size: 30px;
     font-style: italic;
     font-weight: bold;
-    margin-top: -50px;
+    margin-top: -65px;
 }
 
 /* ======== Animation Animal ======== */
