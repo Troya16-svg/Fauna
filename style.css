@@ -60,7 +60,7 @@ button {
 .welcome-text {
     max-width: 470px;
     margin: 28px 0 34px;
-    color:rgb(0, 0, 0);
+    color:darkolivegreen;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     letter-spacing: 2px;
     font-size: 20px;
@@ -69,13 +69,13 @@ button {
 
 #startBtn {
     padding: 16px 23px;
-    border: 0;
-    border-radius: 4px;
+    border: none;
+    border-radius: 8px;
     background: #d87525;
     color: white;
     cursor: pointer;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     transition: background 0.2s ease, transform 0.2s ease;
 }
@@ -87,7 +87,7 @@ button {
 }
 
 #startBtn:hover {
-    background: #b75b18;
+    background: #ffc400;
     transform: translateY(-2px);
 }
 
@@ -354,7 +354,7 @@ h2 {
 
 @keyframes zoomIn {
     from {
-        transform: scale(0.6);
+        transform: scale(0.25);
         opacity: 0;
     }
     to {
