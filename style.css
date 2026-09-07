@@ -8,7 +8,7 @@ body {
     background-attachment: fixed;
     margin: 0;
     padding: 10px;
-    color:rgb(0, 0, 0)
+
 }
 
 button {
@@ -52,7 +52,7 @@ button {
 
 #welcome-screen h1 {
     margin: 0;
-    color:darkolivegreen;
+    color:yellowgreen;
     font-size: clamp(42px, 5vw, 74px);
     line-height: 0.98;
     letter-spacing: -1px;
@@ -358,6 +358,108 @@ h2 {
     margin-bottom: -50px;
 }
 
+#correct-photo-btn {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: zoom-in;
+}
+
+#correct-photo-btn:focus-visible,
+#close-photo-btn:focus-visible {
+    outline: 4px solid chocolate;
+    outline-offset: 4px;
+}
+
+/* ======== Zoom de la foto correcta ======== */
+
+#photo-modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.82);
+    z-index: 10000;
+}
+
+#photo-viewport {
+    width: min(92vw, 1200px);
+    height: min(82vh, 800px);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+}
+
+#photo-viewport:active {
+    cursor: grabbing;
+}
+
+#zoomed-photo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transform-origin: center;
+    user-select: none;
+    touch-action: none;
+}
+
+#close-photo-btn {
+    position: absolute;
+    top: 350px;
+    right: 950px;
+    width: 48px;
+    height: 48px;
+    border: 0;
+    border-radius: 50%;
+    background: white;
+    color: #333;
+    cursor: pointer;
+    font-size: 34px;
+    line-height: 1;
+}
+
+#photo-controls {
+    position: absolute;
+    bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#photo-help {
+    position: absolute;
+    width: 28%;
+    bottom: 275px;
+    font-size: 25px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    font-size: 30px;
+    line-height: 1,25;
+    font-weight: light;
+    color:rgb(255, 255, 255);
+}
+
+#photo-controls button {
+    min-width: 44px;
+    height: 40px;
+    padding: 0 12px;
+    border: 0;
+    border-radius: 20px;
+    background: rgb(99, 20, 20, 0);
+    color: chocolate;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+}
+
+#photo-controls button:hover {
+    color: olive;
+}
+
 #correct-name {
     font-size: 50px;
     font-weight: bold;
@@ -385,5 +487,21 @@ h2 {
     to {
         transform: scale(1);
         opacity: 1;
+    }
+}
+
+@media (max-width: 760px) {
+    #correct-img {
+        width: 90vw;
+        height: 60vh;
+    }
+
+    #correct-animal {
+        margin-top: 40px;
+    }
+
+    #photo-viewport {
+        width: 94vw;
+        height: 78vh;
     }
 }

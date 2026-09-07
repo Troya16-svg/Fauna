@@ -20,6 +20,27 @@ const animalsData = [
   { name: "Sapito de antifaz", question: "¿Qué sapito con marcas faciales aparece aquí?", scientific: "(Batrachyla taeniata)", photo: "SapitoDeAntifaz.png", shape: "SapitoDeAntifaz.png" }
 ];
 
+const animalDescriptions = {
+  "Huillín": "Nutria de río que habita ambientes acuáticos de Chile y Argentina. Es una especie en peligro de extinción.",
+  "Sapo esmeralda de la selva": "Rana arborícola de color verde brillante que vive entre la vegetación húmeda de los bosques del sur de Chile.",
+  "Churrete": "Ave de orillas de ríos y esteros que busca pequeños invertebrados entre las piedras y cerca del agua.",
+  "Abejorro chileno": "Abejorro nativo de gran tamaño y coloración rojiza. Es un polinizador importante de la flora del bosque templado.",
+  "Garza blanca grande": "Ave zancuda de plumaje blanco que caza peces y otros animales pequeños en aguas poco profundas.",
+  "Ranita de Darwin": "Pequeña rana del bosque nativo. El macho protege a sus crías transportándolas dentro de su saco vocal.",
+  "Martín pescador": "Ave de colores intensos que se alimenta principalmente de peces, capturándolos mediante rápidos vuelos sobre el agua.",
+  "Chuncho": "Pequeña rapaz activa de día y de noche, que caza insectos, aves pequeñas y roedores.",
+  "Fío-fío": "Ave pequeña y migratoria que llega al sur de Chile durante la primavera para alimentarse y reproducirse.",
+  "Coliguacho": "Tábano de gran tamaño y alas transparentes, frecuente en zonas boscosas y húmedas durante los meses cálidos.",
+  "Rana moteada": "Anfibio pequeño de piel moteada que vive entre la hojarasca y la vegetación húmeda del bosque austral.",
+  "Rana de hojarasca austral": "Rana terrestre que se refugia bajo hojas y troncos húmedos. Su canto se escucha en los bosques del sur.",
+  "Pilpilén": "Ave costera de pico largo y fuerte, adaptado para abrir moluscos y buscar alimento en playas y estuarios.",
+  "Pudú": "El ciervo más pequeño de Chile. Vive en bosques densos y se alimenta de hojas, brotes y frutos.",
+  "Chucao": "Ave terrestre de colores intensos y canto característico, asociada a los bosques húmedos del sur.",
+  "Zorro chilote": "Cánido endémico de los bosques templados de Chiloé y Nahuelbuta. Es uno de los mamíferos más amenazados de Chile.",
+  "Hadita del bosque": "Escarabajo nativo de los bosques del sur, donde participa en el ciclo natural de la materia orgánica del suelo.",
+  "Sapito de antifaz": "Pequeño anfibio de bosque que recibe su nombre por las manchas oscuras alrededor de sus ojos."
+};
+
 let score = 0;
 let errors = 0;
 let current = 0;
@@ -27,6 +48,75 @@ let answerLocked = false;
 
 const welcomeScreen = document.getElementById("welcome-screen");
 const gameScreen = document.getElementById("game-screen");
+const photoModal = document.getElementById("photo-modal");
+const zoomedPhoto = document.getElementById("zoomed-photo");
+const photoHelp = document.getElementById("photo-help");
+const photoViewport = document.getElementById("photo-viewport");
+let photoZoom = 1;
+let photoOffsetX = 0;
+let photoOffsetY = 0;
+let dragStartX = 0;
+let dragStartY = 0;
+
+function updatePhotoTransform() {
+  zoomedPhoto.style.transform = `translate(${photoOffsetX}px, ${photoOffsetY}px) scale(${photoZoom})`;
+}
+
+function resetPhotoZoom() {
+  photoZoom = 1;
+  photoOffsetX = 0;
+  photoOffsetY = 0;
+  updatePhotoTransform();
+}
+
+function changePhotoZoom(amount) {
+  photoZoom = Math.min(5, Math.max(1, photoZoom + amount));
+  updatePhotoTransform();
+}
+
+function closePhotoZoom() {
+  photoModal.classList.add("hidden");
+}
+
+document.getElementById("correct-photo-btn").onclick = () => {
+  zoomedPhoto.src = document.getElementById("correct-img").src;
+  zoomedPhoto.alt = document.getElementById("correct-img").alt;
+  resetPhotoZoom();
+  photoModal.classList.remove("hidden");
+  document.getElementById("close-photo-btn").focus();
+};
+
+document.getElementById("close-photo-btn").onclick = closePhotoZoom;
+
+photoModal.onclick = event => {
+  if (event.target === photoModal) closePhotoZoom();
+};
+
+document.getElementById("zoom-in-btn").onclick = () => changePhotoZoom(0.5);
+document.getElementById("zoom-out-btn").onclick = () => changePhotoZoom(-0.5);
+document.getElementById("reset-zoom-btn").onclick = resetPhotoZoom;
+
+photoViewport.addEventListener("wheel", event => {
+  event.preventDefault();
+  changePhotoZoom(event.deltaY < 0 ? 0.25 : -0.25);
+}, { passive: false });
+
+photoViewport.addEventListener("pointerdown", event => {
+  photoViewport.setPointerCapture(event.pointerId);
+  dragStartX = event.clientX - photoOffsetX;
+  dragStartY = event.clientY - photoOffsetY;
+});
+
+photoViewport.addEventListener("pointermove", event => {
+  if (!photoViewport.hasPointerCapture(event.pointerId)) return;
+  photoOffsetX = event.clientX - dragStartX;
+  photoOffsetY = event.clientY - dragStartY;
+  updatePhotoTransform();
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") closePhotoZoom();
+});
 
 document.getElementById("startBtn").onclick = () => {
   welcomeScreen.classList.add("hidden");
@@ -99,6 +189,7 @@ function loadAnimal() {
 
   const animal = animals[current];
   answerLocked = false;
+  closePhotoZoom();
 
   document.getElementById("question").innerText = animal.question;
 
@@ -150,6 +241,7 @@ function checkAnswer(selected) {
 
     document.getElementById("correct-name").innerText = animal.name;
     document.getElementById("correct-scientific").innerText = animal.scientific;
+    photoHelp.innerText = animalDescriptions[animal.name];
 
     document.getElementById("correct-img").classList.add("correct-zoom");
 
