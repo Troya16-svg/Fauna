@@ -57,9 +57,14 @@ let photoOffsetX = 0;
 let photoOffsetY = 0;
 let dragStartX = 0;
 let dragStartY = 0;
+let photoPointerStartX = 0;
+let photoPointerStartY = 0;
+let photoWasDragged = false;
+const photoPanSpeed = 1;
 
 function updatePhotoTransform() {
   zoomedPhoto.style.transform = `translate(${photoOffsetX}px, ${photoOffsetY}px) scale(${photoZoom})`;
+  photoViewport.classList.toggle("is-zoomed", photoZoom > 1);
 }
 
 function resetPhotoZoom() {
@@ -71,6 +76,27 @@ function resetPhotoZoom() {
 
 function changePhotoZoom(amount) {
   photoZoom = Math.min(5, Math.max(1, photoZoom + amount));
+  updatePhotoTransform();
+}
+
+function zoomPhotoAtPoint(event) {
+  if (photoWasDragged) {
+    photoWasDragged = false;
+    return;
+  }
+
+  const viewportRect = photoViewport.getBoundingClientRect();
+  const centerX = viewportRect.width / 2;
+  const centerY = viewportRect.height / 2;
+  const clickX = event.clientX - viewportRect.left;
+  const clickY = event.clientY - viewportRect.top;
+  const imageX = (clickX - centerX - photoOffsetX) / photoZoom;
+  const imageY = (clickY - centerY - photoOffsetY) / photoZoom;
+  const nextZoom = Math.min(5, photoZoom + 0.75);
+
+  photoOffsetX = clickX - centerX - imageX * nextZoom;
+  photoOffsetY = clickY - centerY - imageY * nextZoom;
+  photoZoom = nextZoom;
   updatePhotoTransform();
 }
 
@@ -96,21 +122,27 @@ document.getElementById("zoom-in-btn").onclick = () => changePhotoZoom(0.5);
 document.getElementById("zoom-out-btn").onclick = () => changePhotoZoom(-0.5);
 document.getElementById("reset-zoom-btn").onclick = resetPhotoZoom;
 
-photoViewport.addEventListener("wheel", event => {
-  event.preventDefault();
-  changePhotoZoom(event.deltaY < 0 ? 0.25 : -0.25);
-}, { passive: false });
+photoViewport.addEventListener("click", zoomPhotoAtPoint);
 
 photoViewport.addEventListener("pointerdown", event => {
   photoViewport.setPointerCapture(event.pointerId);
+  photoPointerStartX = event.clientX;
+  photoPointerStartY = event.clientY;
+  photoWasDragged = false;
   dragStartX = event.clientX - photoOffsetX;
   dragStartY = event.clientY - photoOffsetY;
 });
 
 photoViewport.addEventListener("pointermove", event => {
   if (!photoViewport.hasPointerCapture(event.pointerId)) return;
-  photoOffsetX = event.clientX - dragStartX;
-  photoOffsetY = event.clientY - dragStartY;
+  if (Math.abs(event.clientX - photoPointerStartX) > 4 ||
+      Math.abs(event.clientY - photoPointerStartY) > 4) {
+    photoWasDragged = true;
+  }
+  photoOffsetX = (event.clientX - photoPointerStartX) * photoPanSpeed +
+    (photoPointerStartX - dragStartX);
+  photoOffsetY = (event.clientY - photoPointerStartY) * photoPanSpeed +
+    (photoPointerStartY - dragStartY);
   updatePhotoTransform();
 });
 

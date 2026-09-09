@@ -138,12 +138,13 @@ h2 {
 
 #progress-container {
     padding: 6px;
-    width: 40%;
+    width: 30%;
     height: 25px;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.5);
     margin: 20px auto;
     overflow: hidden;
-    border-radius: 30px;
+    border: 1px solid rgba(43, 228, 6, 0.25);
+    border-radius: 15px;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
     0 1px rgba(255, 255, 255, 0.08);
     
@@ -152,7 +153,7 @@ h2 {
 #progress-bar {
     height: 100%;
     width: 85%;
-    border-radius: 30px;
+    border-radius: 15px;
     background-color: rgb(43, 228, 6);
     box-shadow: 0 0 8px 1px rgb(255, 255, 255) inset;transition: width 0.3s ease;
 }
@@ -227,8 +228,8 @@ h2 {
 /* ======== BOTÓN SIGUIENTE ======== */
 
 #nextBtn {
-    margin-top: 20px;
-    padding: 10px 20px;
+    margin-top: 5px;
+    padding: 10px 30px;
     font-size: 15px;
     border: none;
     box-shadow: 0px 10px 14px -7px #3e7327;
@@ -348,7 +349,7 @@ h2 {
 /* ======== Correct Animal ======== */
 
 #correct-animal {
-    margin-top: 100px;
+    margin-top: 0px;
 }
 
 #correct-img {
@@ -371,6 +372,14 @@ h2 {
     outline-offset: 4px;
 }
 
+#photo-zoom-hint {
+    margin: 0 0 24px;
+    color: #000000;
+    font-size: 18px;
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
 /* ======== Zoom de la foto correcta ======== */
 
 #photo-modal {
@@ -380,7 +389,7 @@ h2 {
     justify-content: center;
     align-items: center;
     padding: 30px;
-    background: rgba(0, 0, 0, 0.82);
+    background: linear-gradient(rgba(3, 3, 3, 0.95), rgba(32, 40, 0, 0.95));
     z-index: 10000;
 }
 
@@ -391,10 +400,18 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: grab;
+    cursor: default;
 }
 
 #photo-viewport:active {
+    cursor: grabbing;
+}
+
+#photo-viewport.is-zoomed {
+    cursor: grab;
+}
+
+#photo-viewport.is-zoomed:active {
     cursor: grabbing;
 }
 
@@ -405,42 +422,54 @@ h2 {
     transform-origin: center;
     user-select: none;
     touch-action: none;
+    cursor: zoom-in;
+}
+
+#photo-viewport.is-zoomed #zoomed-photo {
+    cursor: grab;
+}
+
+#photo-viewport.is-zoomed:active #zoomed-photo {
+    cursor: grabbing;
 }
 
 #close-photo-btn {
     position: absolute;
-    top: 350px;
+    top: 200px;
     right: 550px;
     width: 48px;
     height: 48px;
     border: 0;
     border-radius: 50%;
-    background: white;
-    color: #333;
+    background: rgb(255, 255, 255);
+    color: rgb(255, 106, 0);
     cursor: pointer;
     font-size: 34px;
+    font-weight: bold;
     line-height: 1;
 }
 
 #photo-controls {
     position: absolute;
-    bottom: 24px;
+    top: 200px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 20px;
 }
 
 #photo-help {
     position: absolute;
-    width: 28%;
+    pointer-events: none;
+    width: 40%;
     bottom: 275px;
     font-size: 25px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     letter-spacing: 2px;
     font-size: 30px;
-    line-height: 1,25;
+    line-height: 1.25;
     font-weight: light;
     color:rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px rgb(149, 255, 0);
 }
 
 #photo-controls button {
@@ -449,15 +478,16 @@ h2 {
     padding: 0 12px;
     border: 0;
     border-radius: 20px;
-    background: rgb(99, 20, 20, 0);
-    color: chocolate;
+    background: rgba(255, 255, 255, 1);
+    color: rgb(255, 106, 0);
     cursor: pointer;
     font: inherit;
     font-weight: bold;
 }
 
 #photo-controls button:hover {
-    color: olive;
+    color: rgb(0, 0, 0);
+    background: rgb(149, 255, 0);
 }
 
 #correct-name {
