@@ -52,7 +52,8 @@ button {
 
 #welcome-screen h1 {
     margin: 0;
-    color:yellowgreen;
+    color:rgb(97, 141, 9);
+    text-shadow: 0px 10px 10px -7px #121212;
     font-size: clamp(42px, 5vw, 74px);
     line-height: 0.98;
     letter-spacing: -1px;
@@ -141,8 +142,8 @@ h2 {
     width: 30%;
     height: 25px;
     background: rgba(255, 255, 255, 0.5);
-    margin: 20px auto;
-    overflow: hidden;
+    margin: 10px auto;
+    overflow: visible;
     border: 1px solid rgba(43, 228, 6, 0.25);
     border-radius: 15px;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
@@ -153,39 +154,44 @@ h2 {
 #progress-bar {
     position: relative;
     height: 100%;
-    width: 85%;
+    width: 100%;
     border-radius: 15px;
     background: linear-gradient(to right, #00ff00, #016f01);
     box-shadow: 0 0 8px 1px rgb(255, 255, 255) inset;
     transition: width 0.3s ease;
+    z-index: 1;
+
 }
 
 #progress-bar::after {
     content: "";
     position: absolute;
     top: 50%;
-    right: 0;
+    right: -12px;
     width: 25px;
     height: 25px;
     border: 3px solid #ffffff;
     border-radius: 50%;
-    background: rgb(64, 255, 0);
+    background: linear-gradient(to right, #00ff00, #0bdc0b);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
     transform: translateY(-50%);
+    z-index: 2;
+    
+
 }
 
 /* ======== SILUETA ======== */
 
 #silhouette-card {
-    width: 750px;
-    height: 750px;
-    margin: 20px auto;
+    width: 550px;
+    height: 5%;
+    margin: 10px auto;
     background-image: url("fotos/Background.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 12px;
-    display: flex;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     justify-content: center;
     align-items: center;
 
@@ -195,7 +201,7 @@ h2 {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    opacity: 0.70;
+    opacity: 0.8;
 }
 
 /* ======== OPCIONES ======== */
@@ -206,15 +212,16 @@ h2 {
     gap: 20px;
     flex-wrap: wrap;
     margin-top: 20px;
+
 }
 
 .option {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: hidden;
     background: #f3f3f3;
     cursor: pointer;
@@ -369,10 +376,10 @@ h2 {
 }
 
 #correct-img {
-    width:750px;
-    height: 750px;
+    width:550px;
+    height: 550px;
     object-fit: contain;
-    margin-bottom: -50px;
+    margin-bottom: -100px;
 }
 
 #correct-photo-btn {
@@ -391,7 +398,7 @@ h2 {
 #photo-zoom-hint {
     margin: 0 0 24px;
     color: #000000;
-    font-size: 18px;
+    font-size: 12px;
     font-style: italic;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
@@ -451,8 +458,8 @@ h2 {
 
 #close-photo-btn {
     position: absolute;
-    top: 200px;
-    right: 550px;
+    top: 75px;
+    right: 75px;
     width: 48px;
     height: 48px;
     border: 0;
@@ -476,8 +483,8 @@ h2 {
 #photo-help {
     position: absolute;
     pointer-events: none;
-    width: 40%;
-    bottom: 275px;
+    width: 60%;
+    bottom: 100px;
     font-size: 25px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     letter-spacing: 2px;
@@ -507,16 +514,18 @@ h2 {
 }
 
 #correct-name {
-    font-size: 50px;
+    font-size: 35px;
     font-weight: bold;
-    margin-top: 50px;
+    margin-top: 100px;
+    color:rgba(32, 40, 0, 0.95)
 }
 
 #correct-scientific {
-    font-size: 30px;
+    font-size: 20px;
     font-style: italic;
-    font-weight: bold;
-    margin-top: -65px;
+    font-weight: light;
+    margin-top: -35px;
+    color: rgb(0, 0, 0);
 }
 
 /* ======== Animation Animal ======== */
@@ -550,11 +559,33 @@ h2 {
         width: 94vw;
         height: 78vh;
     }
-}
 
+    #close-photo-btn {
+        top: 16px;
+        right: 16px;
+        z-index: 2;
+    }
+
+    #photo-controls {
+        top: auto;
+        bottom: max(24px, env(safe-area-inset-bottom));
+        gap: 10px;
+        z-index: 2;
+    }
+
+    #photo-help {
+        bottom: 82px;
+        width: calc(100% - 32px);
+        font-size: 16px;
+        letter-spacing: 0;
+        text-align: center;
+    }
+
+}
+/*
 #site-footer {
     position: absolute;
-    bottom: -25px;
+    bottom: -350px;
     left: 0;
     width: 100%;
     display: flex;
@@ -563,12 +594,125 @@ h2 {
     min-height: 48px;
     padding: 8px 20px;
     box-sizing: border-box;
-    background: rgba(42, 67, 20, 0.0);
-    z-index: 20;
+    background: rgba(42, 67, 20, 0.5);
+    z-index: 0;
 }
-
+*/
 #site-footer-logo {
     width: 60px;
     height: auto;
     object-fit: contain;
+}
+
+@media (max-width: 760px) {
+    #site-footer {
+        position: static;
+        width: 100%;
+        margin-top: 28px;
+    }
+
+    #close-photo-btn {
+        position: absolute;
+        inset: 16px 16px auto auto;
+        z-index: 10001;
+    }
+}
+
+@media (max-width: 760px) {
+    #game-screen {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    #game-screen h1,
+    #final-screen h1 {
+        font-size: clamp(24px, 7vw, 34px);
+        letter-spacing: -1px;
+    }
+
+    #game-screen h2 {
+        font-size: clamp(18px, 5vw, 25px);
+        line-height: 1.2;
+    }
+
+    #progress-container {
+        width: min(72%, 280px);
+        height: 18px;
+        margin: 12px auto 18px;
+    }
+
+    #progress-bar::after {
+        right: -9px;
+        width: 20px;
+        height: 20px;
+        border-width: 2px;
+    }
+
+    #silhouette-card {
+        width: min(100%, 360px);
+        height: auto;
+        aspect-ratio: 1;
+        margin: 14px auto;
+    }
+
+    .options {
+        gap: 10px;
+        margin-top: 14px;
+    }
+
+    .option {
+        width: clamp(64px, 21vw, 92px);
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    #message {
+        margin: 14px 0;
+        font-size: clamp(28px, 9vw, 42px);
+    }
+
+    #correct-animal {
+        margin-top: 20px;
+    }
+
+    #correct-img {
+        width: min(90vw, 550px);
+        height: auto;
+        max-height: 55vh;
+        margin-bottom: 0;
+    }
+
+    #correct-name {
+        margin: 18px 0 0;
+        font-size: clamp(24px, 7vw, 35px);
+        line-height: 1.1;
+    }
+
+    #correct-scientific {
+        margin: 6px 0 0;
+        font-size: clamp(16px, 4vw, 20px);
+    }
+
+    #nextBtn {
+        margin: 18px auto 0;
+    }
+
+    #final-screen {
+        padding: 24px;
+        box-sizing: border-box;
+        font-size: 24px;
+    }
+
+    #photo-modal {
+        padding: 16px;
+    }
+
+    #photo-viewport {
+        width: 100%;
+        height: 76vh;
+    }
+
+    #photo-help {
+        bottom: 76px;
+    }
 }
