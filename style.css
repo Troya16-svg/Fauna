@@ -124,14 +124,13 @@ h1 {
     font-size: 50px;
     line-height: 1;
     font-weight: Bold;
-    color:rgb(144, 0, 255);
-}
+    color:darkolivegreen
 
 h2 {
     margin-bottom: 0px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 30px;
-    color:rgb(255, 0, 132);
+    color:darkgoldenrod
     font-weight: bold;
 }
 
