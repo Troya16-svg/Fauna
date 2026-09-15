@@ -7,13 +7,12 @@ const animalsData = [
   { name: "Martín pescador", question: "¿Qué ave asociada a los ríos aparece aquí?", scientific: "(Megaceryle torquata)", photo: "MartinPescador.png", shape: "MartinPescador.png" },
   { name: "Chuncho", question: "¿Cuál es el búho más pequeño de Chile?", scientific: "(Glaucidium nana)", photo: "Chuncho.png", shape: "Chuncho.png" },
   { name: "Fío-fío", question: "¿Qué ave del bosque es conocida por migrar miles de kilómetros hasta la región amazónica?", scientific: "(Elaenia albiceps)", photo: "FioFio.png", shape: "FioFio.png" },
-  { name: "Coliguacho", question: "¿Qué insecto de alas transparentes aparece en esta silueta?", scientific: "(Osca lata)", photo: "Coliguacho.png", shape: "Coliguacho.png" },
+  { name: "Coliguacho", question: "¿Qué insecto volador se alimenta de sangre?", scientific: "(Osca lata)", photo: "Coliguacho.png", shape: "Coliguacho.png" },
   { name: "Pilpilén", question: "¿Qué ave habita todo tipo de costas aunque prefiere las playas de arena?", scientific: "(Haematopus palliatus)", photo: "Pilpilen.png", shape: "Pilpilen.png" },
   { name: "Pudú", question: "¿Cuál es el ciervo más pequeño de Chile?", scientific: "(Pudu puda)", photo: "Pudu.png", shape: "Pudu.png" },
   { name: "Chucao", question: "¿Qué ave del bosque prefiere correr y saltar por el suelo en lugar de volar?", scientific: "(Scelorchilus rubecula)", photo: "Chucao.png", shape: "Chucao.png" },
   { name: "Zorro chilote", question: "¿Cuál es el zorro más pequeño de Chile?", scientific: "(Lycalopex fulvipes)", photo: "ZorroChilote.png", shape: "ZorroChilote.png" },
   { name: "Hadita del bosque", question: "¿Qué insecto destaca por sus alas doradas con manchas oscuras que camina por el bosque?", scientific: "(Sphictostethus gravesii)", photo: "HaditaDelBosque.png", shape: "HaditaDelBosque.png" },
-  { name: "Osca lata", question: "¿Qué insecto volador se alimenta de sangre?", scientific: "(Sphictostethus gravesii)", photo: "OscaLata.png", shape: "OscaLata.png" },
 
   // { name: "Sapito de antifaz", question: "¿Qué sapito con marcas faciales aparece aquí?", scientific: "(Batrachyla taeniata)", photo: "SapitoDeAntifaz.png", shape: "SapitoDeAntifaz.png" }
  // { name: "Ranita de Darwin", question: "¿Qué pequeña rana corresponde a esta silueta?", scientific: "(Rhinoderma darwinii)", photo: "RanitaDeDarwin.png", shape: "RanitaDeDarwin.png" },
@@ -30,13 +29,12 @@ const animalDescriptions = {
   "Martín pescador": "El martín pescador es de color gris azulado en la cabeza, dorso y alas. Se alimenta en cursos de agua de todo tipo, corrientes o estancadas",
   "Chuncho": "Esta ave es de hábitos diurnos y nocturnos, se alimenta de insectos, reptiles, roedores e incluso animales más grandes ",
   "Fío-fío": "Al finalizar el verano emprende un viaje de miles de kilómetros hacia el norte, llegando a Perú, Brasil e incluso Colombia",
-  "Coliguacho": "Tábano de gran tamaño y alas transparentes, frecuente en zonas boscosas y húmedas durante los meses cálidos.",
+  "Coliguacho": "Las hembras de coliguacho son hematófagas, consumen sangre de mamíferos (humanos, vacas, caballos) para obtener proteínas que permiten el desarrollo de sus huevos",
   "Pilpilén": "Se distribuye desde Arica hasta Chiloé, y en menor número hasta Magallanes. Se alimenta de invertebrados marinos como almejas, choros, lapas y cangrejos",
   "Pudú": "Es el segundo más pequeño del mundo, alcanzando una altura de 30 a 40 cm",
   "Chucao": "Sus vuelos son sumamente cortos y bajos, utilizándolos solo para escapar de algún peligro",
   "Zorro chilote": "Es un cánido endémico de Chile y es considerado mundialmente uno de los mamíferos en mayor peligro de extinción",
   "Hadita del bosque": "Presenta colores brillantes, cubierto de un vello dorado. Las hembras poseen pequeñas alas que les impiden volar",
-  "Osca lata": "Las hembras de coliguacho son hematófagas, consumen sangre de mamíferos (humanos, vacas, caballos) para obtener proteínas que permiten el desarrollo de sus huevos",
 
   //"Sapito de antifaz": "Pequeño anfibio de bosque que recibe su nombre por las manchas oscuras alrededor de sus ojos."
   //"Sapo esmeralda de la selva": "Tamaño grande. Habita ambientes frecuentemente anegados con presencia de helechos y juncos",
