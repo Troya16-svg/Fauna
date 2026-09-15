@@ -412,6 +412,14 @@ h2 {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
+#photo-zoom-hint img {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    vertical-align: -3px;
+    object-fit: contain;
+}
+
 /* ======== Zoom de la foto correcta ======== */
 
 #photo-modal {
@@ -589,6 +597,13 @@ h2 {
         text-align: center;
     }
 
+    #photo-zoom-hint {
+        width: calc(100% - 32px);
+        margin: 28px auto 24px;
+        font-size: 10px;
+        text-align: center;
+    }
+
 }
 /*
 #site-footer {
@@ -639,7 +654,7 @@ h2 {
     }
 
     #game-screen h2 {
-        font-size: clamp(25px, 5vw, 25px);
+        font-size: clamp(16px, 4vw, 20px);
         line-height: 1.2;
     }
 
@@ -687,24 +702,24 @@ h2 {
     }
 
     #correct-animal {
-        margin-top: 10px;
+        margin-top: -20px;
     }
 
     #correct-img {
         width: min(90vw, 550px);
         height: auto;
         max-height: 55vh;
-        margin-bottom: 0;
+        margin-bottom: 0px;
     }
 
     #correct-name {
-        margin: 12px 0 0;
+        margin: -10px 0 0;
         font-size: clamp(24px, 7vw, 35px);
         line-height: 1.1;
     }
 
     #correct-scientific {
-        margin: 6px 0 0;
+        margin: -5px 0 0;
         font-size: clamp(16px, 4vw, 20px);
     }
 

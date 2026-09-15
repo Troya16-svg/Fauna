@@ -192,7 +192,7 @@ let animals = generateAnimals();
 // Barra de progreso
 function updateProgress() {
   const total = animals.length;
-  const progress = ((current + 1) / total) * 100;
+  const progress = (current + 0.25) / total * 100;
   document.getElementById("progress-bar").style.width = progress + "%";
 }
 
