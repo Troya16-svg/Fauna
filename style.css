@@ -483,12 +483,11 @@ h2 {
 #photo-help {
     position: absolute;
     pointer-events: none;
-    width: 60%;
+    width: 40%;
     bottom: 100px;
-    font-size: 25px;
+    font-size: 30px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     letter-spacing: 2px;
-    font-size: 30px;
     line-height: 1.25;
     font-weight: light;
     color:rgb(255, 255, 255);
@@ -576,7 +575,7 @@ h2 {
     #photo-help {
         bottom: 82px;
         width: calc(100% - 32px);
-        font-size: 16px;
+        font-size: 14px;
         letter-spacing: 0;
         text-align: center;
     }

@@ -1,50 +1,51 @@
 // Lista de animales con nombre común + científico + foto + silueta
 const animalsData = [
-  { name: "Huillín", question: "¿sabes que anfibio está en estado crítico de extinción?", scientific: "(Lontra provocax)", photo: "Huillin.png", shape: "Huillin.png" },
-  { name: "Sapo esmeralda de la selva", question: "¿Qué anfibio de color esmeralda corresponde a esta silueta?", scientific: "(Hylorina sylvatica)", photo: "RanaEsmeralda.png", shape: "RanaEsmeralda.png" },
-  { name: "Churrete", question: "¿Qué ave se reconoce por esta silueta?", scientific: "(Cinclodes patagonicus)", photo: "Churrete.png", shape: "Churrete.png" },
-  { name: "Abejorro chileno", question: "¿Qué insecto nativo corresponde a esta silueta?", scientific: "(Bombus dahlbomii)", photo: "Abejorro.png", shape: "Abejorro.png" },
-  { name: "Garza blanca grande", question: "¿Qué ave zancuda aparece en esta silueta?", scientific: "(Ardea alba)", photo: "Garza.png", shape: "Garza.png" },
-  { name: "Ranita de Darwin", question: "¿Qué pequeña rana corresponde a esta silueta?", scientific: "(Rhinoderma darwinii)", photo: "RanitaDeDarwin.png", shape: "RanitaDeDarwin.png" },
+  { name: "Huillín", question: "¿A qué especie se le conoce como gato de río?", scientific: "(Lontra provocax)", photo: "Huillin.png", shape: "Huillin.png" },
+  { name: "Churrete", question: "¿Qué especie de ave es conocida por su activa digestión?", scientific: "(Cinclodes patagonicus)", photo: "Churrete.png", shape: "Churrete.png" },
+  { name: "Abejorro chileno", question: "¿Qué especie de insecto se encuentra entre los abejorro más grandes del mundo?", scientific: "(Bombus dahlbomii)", photo: "Abejorro.png", shape: "Abejorro.png" },
+  { name: "Garza grande", question: "¿Qué ave acuática está ampliamante distribuida en el mundo?", scientific: "(Ardea alba)", photo: "Garza.png", shape: "Garza.png" },
   { name: "Martín pescador", question: "¿Qué ave asociada a los ríos aparece aquí?", scientific: "(Megaceryle torquata)", photo: "MartinPescador.png", shape: "MartinPescador.png" },
-  { name: "Chuncho", question: "¿Qué pequeña rapaz nocturna corresponde a esta silueta?", scientific: "(Glaucidium nana)", photo: "Chuncho.png", shape: "Chuncho.png" },
-  { name: "Fío-fío", question: "¿Qué ave migratoria corresponde a esta silueta?", scientific: "(Elaenia albiceps)", photo: "FioFio.png", shape: "FioFio.png" },
+  { name: "Chuncho", question: "¿Cuál es el búho más pequeño de Chile?", scientific: "(Glaucidium nana)", photo: "Chuncho.png", shape: "Chuncho.png" },
+  { name: "Fío-fío", question: "¿Qué ave del bosque es conocida por migrar miles de kilómetros hasta la región amazónica?", scientific: "(Elaenia albiceps)", photo: "FioFio.png", shape: "FioFio.png" },
   { name: "Coliguacho", question: "¿Qué insecto de alas transparentes aparece en esta silueta?", scientific: "(Osca lata)", photo: "Coliguacho.png", shape: "Coliguacho.png" },
-  { name: "Rana moteada", question: "¿Qué rana moteada corresponde a esta silueta?", scientific: "(Batrachyla leptopus)", photo: "RanaMoteada.png", shape: "RanaMoteada.png" },
-  { name: "Rana de hojarasca austral", question: "¿Qué anfibio del suelo del bosque aparece aquí?", scientific: "(Eupsophus calcaratus)", photo: "RanaDeHojarasca.png", shape: "RanaDeHojarasca.png" },
-  { name: "Pilpilén", question: "¿Qué ave costera corresponde a esta silueta?", scientific: "(Haematopus palliatus)", photo: "Pilpilen.png", shape: "Pilpilen.png" },
-  { name: "Pudú", question: "¿Qué pequeño ciervo nativo aparece en esta silueta?", scientific: "(Pudu puda)", photo: "Pudu.png", shape: "Pudu.png" },
-  { name: "Chucao", question: "¿Qué ave del bosque lluvioso corresponde a esta silueta?", scientific: "(Scelorchilus rubecula)", photo: "Chucao.png", shape: "Chucao.png" },
-  { name: "Zorro chilote", question: "¿Qué cánido endémico aparece en esta silueta?", scientific: "(Lycalopex fulvipes)", photo: "ZorroChilote.png", shape: "ZorroChilote.png" },
-  { name: "Hadita del bosque", question: "¿Qué escarabajo nativo corresponde a esta silueta?", scientific: "(Sphictostethus gravesii)", photo: "HaditaDelBosque.png", shape: "HaditaDelBosque.png" },
-  { name: "Sapito de antifaz", question: "¿Qué sapito con marcas faciales aparece aquí?", scientific: "(Batrachyla taeniata)", photo: "SapitoDeAntifaz.png", shape: "SapitoDeAntifaz.png" }
+  { name: "Pilpilén", question: "¿Qué ave habita todo tipo de costas aunque prefiere las playas de arena?", scientific: "(Haematopus palliatus)", photo: "Pilpilen.png", shape: "Pilpilen.png" },
+  { name: "Pudú", question: "¿Cuál es el ciervo más pequeño de Chile?", scientific: "(Pudu puda)", photo: "Pudu.png", shape: "Pudu.png" },
+  { name: "Chucao", question: "¿Qué ave del bosque prefiere correr y saltar por el suelo en lugar de volar?", scientific: "(Scelorchilus rubecula)", photo: "Chucao.png", shape: "Chucao.png" },
+  { name: "Zorro chilote", question: "¿Cuál es el zorro más pequeño de Chile?", scientific: "(Lycalopex fulvipes)", photo: "ZorroChilote.png", shape: "ZorroChilote.png" },
+  { name: "Hadita del bosque", question: "¿Qué insecto destaca por sus alas doradas con manchas oscuras que camina por el bosque?", scientific: "(Sphictostethus gravesii)", photo: "HaditaDelBosque.png", shape: "HaditaDelBosque.png" },
+ // { name: "Sapito de antifaz", question: "¿Qué sapito con marcas faciales aparece aquí?", scientific: "(Batrachyla taeniata)", photo: "SapitoDeAntifaz.png", shape: "SapitoDeAntifaz.png" }
+ // { name: "Ranita de Darwin", question: "¿Qué pequeña rana corresponde a esta silueta?", scientific: "(Rhinoderma darwinii)", photo: "RanitaDeDarwin.png", shape: "RanitaDeDarwin.png" },
+ // { name: "Sapo esmeralda de la selva", question: "Piel suave. Extremidades muy largas y delgadas. Su color es verde esmeralda, con manchas cobrizas irregulares", scientific: "(Hylorina sylvatica)", photo: "RanaEsmeralda.png", shape: "RanaEsmeralda.png" },
+ // { name: "Rana de hojarasca austral", question: "¿Qué anfibio del suelo del bosque aparece aquí?", scientific: "(Eupsophus calcaratus)", photo: "RanaDeHojarasca.png", shape: "RanaDeHojarasca.png" },
+
 ];
 
 const animalDescriptions = {
-  "Huillín": "Nutria de río que habita ambientes acuáticos de Chile y Argentina. Es una especie en peligro de extinción.",
-  "Sapo esmeralda de la selva": "Rana arborícola de color verde brillante que vive entre la vegetación húmeda de los bosques del sur de Chile.",
-  "Churrete": "Ave de orillas de ríos y esteros que busca pequeños invertebrados entre las piedras y cerca del agua.",
-  "Abejorro chileno": "Abejorro nativo de gran tamaño y coloración rojiza. Es un polinizador importante de la flora del bosque templado.",
-  "Garza blanca grande": "Ave zancuda de plumaje blanco que caza peces y otros animales pequeños en aguas poco profundas.",
-  "Ranita de Darwin": "Pequeña rana del bosque nativo. El macho protege a sus crías transportándolas dentro de su saco vocal.",
-  "Martín pescador": "Ave de colores intensos que se alimenta principalmente de peces, capturándolos mediante rápidos vuelos sobre el agua.",
-  "Chuncho": "Pequeña rapaz activa de día y de noche, que caza insectos, aves pequeñas y roedores.",
-  "Fío-fío": "Ave pequeña y migratoria que llega al sur de Chile durante la primavera para alimentarse y reproducirse.",
+  "Huillín": "Es conocido por su agilidad para desplazarse a través de los cuerpos de agua del sur de Chile",
+  "Churrete": "Sus deposiciones son muy líquidas y frecuentes debido a su rápido metabolismo, dejando rastros al defecar continuamente",
+  "Abejorro chileno": "La reina del abejorro chileno es considerada uno de los insectos más grandes del mundo, pueden alcanzar hasta 3 cm de longitud. Se encuentra en peligro de extinción, por la presencia de especies exóticas y la destrucción de hábitat",
+  "Garza grande": "Habita en todos los continentes, excepto en la Antártica. Destaca por su plumaje completamente blanco y su gran tamaño",
+  "Martín pescador": "El martín pescador es de color gris azulado en la cabeza, dorso y alas. Se alimenta en cursos de agua de todo tipo, corrientes o estancadas",
+  "Chuncho": "Esta ave es de hábitos diurnos y nocturnos, se alimenta de insectos, reptiles, roedores e incluso animales más grandes ",
+  "Fío-fío": "Al finalizar el verano emprende un viaje de miles de kilómetros hacia el norte, llegando a Perú, Brasil e incluso Colombia",
   "Coliguacho": "Tábano de gran tamaño y alas transparentes, frecuente en zonas boscosas y húmedas durante los meses cálidos.",
-  "Rana moteada": "Anfibio pequeño de piel moteada que vive entre la hojarasca y la vegetación húmeda del bosque austral.",
-  "Rana de hojarasca austral": "Rana terrestre que se refugia bajo hojas y troncos húmedos. Su canto se escucha en los bosques del sur.",
-  "Pilpilén": "Ave costera de pico largo y fuerte, adaptado para abrir moluscos y buscar alimento en playas y estuarios.",
-  "Pudú": "El ciervo más pequeño de Chile. Vive en bosques densos y se alimenta de hojas, brotes y frutos.",
-  "Chucao": "Ave terrestre de colores intensos y canto característico, asociada a los bosques húmedos del sur.",
-  "Zorro chilote": "Cánido endémico de los bosques templados de Chiloé y Nahuelbuta. Es uno de los mamíferos más amenazados de Chile.",
-  "Hadita del bosque": "Escarabajo nativo de los bosques del sur, donde participa en el ciclo natural de la materia orgánica del suelo.",
-  "Sapito de antifaz": "Pequeño anfibio de bosque que recibe su nombre por las manchas oscuras alrededor de sus ojos."
+  "Pilpilén": "Se distribuye desde Arica hasta Chiloé, y en menor número hasta Magallanes. Se alimenta de invertebrados marinos como almejas, choros, lapas y cangrejos",
+  "Pudú": "Es el segundo más pequeño del mundo, alcanzando una altura de 30 a 40 cm",
+  "Chucao": "Sus vuelos son sumamente cortos y bajos, utilizándolos solo para escapar de algún peligro",
+  "Zorro chilote": "Es un cánido endémico de Chile y es considerado mundialmente uno de los mamíferos en mayor peligro de extinción",
+  "Hadita del bosque": "Presenta colores brillantes, cubierto de un vello dorado. Las hembras poseen pequeñas alas que les impiden volar ",
+  //"Sapito de antifaz": "Pequeño anfibio de bosque que recibe su nombre por las manchas oscuras alrededor de sus ojos."
+  //"Sapo esmeralda de la selva": "Tamaño grande. Habita ambientes frecuentemente anegados con presencia de helechos y juncos",
+  //"Rana moteada": "Anfibio pequeño de piel moteada que vive entre la hojarasca y la vegetación húmeda del bosque austral.",
+  //"Rana de hojarasca austral": "Rana terrestre que se refugia bajo hojas y troncos húmedos. Su canto se escucha en los bosques del sur.",
+  //"Ranita de Darwin": "Pequeña rana del bosque nativo. El macho protege a sus crías transportándolas dentro de su saco vocal.",
 };
 
 let score = 0;
 let errors = 0;
 let current = 0;
 let answerLocked = false;
+const MAX_ANIMALS_PER_GAME = 10;
 
 const welcomeScreen = document.getElementById("welcome-screen");
 const gameScreen = document.getElementById("game-screen");
@@ -158,7 +159,10 @@ document.getElementById("startBtn").onclick = () => {
 
 // Genera animales con distractores
 function generateAnimals() {
-  return animalsData.map(animal => {
+  return animalsData
+    .sort(() => Math.random() - 0.5)
+    .slice(0, MAX_ANIMALS_PER_GAME)
+    .map(animal => {
     const silhouette = `siluetas/${animal.shape}`;
     const correct = `fotos/${animal.photo}`;
 
@@ -176,10 +180,10 @@ function generateAnimals() {
       correct,
       options: [correct, ...distractors].sort(() => Math.random() - 0.5)
     };
-  });
+    });
 }
 
-let animals = generateAnimals().sort(() => Math.random() - 0.5);
+let animals = generateAnimals();
 
 // Barra de progreso
 function updateProgress() {
@@ -325,7 +329,7 @@ document.getElementById("restartBtn").onclick = () => {
   score = 0;
   errors = 0;
   answerLocked = false;
-  animals = generateAnimals().sort(() => Math.random() - 0.5);
+  animals = generateAnimals();
 
   document.getElementById("final-screen").classList.add("hidden");
   document.getElementById("confetti-canvas").style.display = "none";
