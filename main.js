@@ -13,7 +13,9 @@ const animalsData = [
   { name: "Chucao", question: "¿Qué ave del bosque prefiere correr y saltar por el suelo en lugar de volar?", scientific: "(Scelorchilus rubecula)", photo: "Chucao.png", shape: "Chucao.png" },
   { name: "Zorro chilote", question: "¿Cuál es el zorro más pequeño de Chile?", scientific: "(Lycalopex fulvipes)", photo: "ZorroChilote.png", shape: "ZorroChilote.png" },
   { name: "Hadita del bosque", question: "¿Qué insecto destaca por sus alas doradas con manchas oscuras que camina por el bosque?", scientific: "(Sphictostethus gravesii)", photo: "HaditaDelBosque.png", shape: "HaditaDelBosque.png" },
- // { name: "Sapito de antifaz", question: "¿Qué sapito con marcas faciales aparece aquí?", scientific: "(Batrachyla taeniata)", photo: "SapitoDeAntifaz.png", shape: "SapitoDeAntifaz.png" }
+  { name: "Osca lata", question: "¿Qué insecto volador se alimenta de sangre?", scientific: "(Sphictostethus gravesii)", photo: "OscaLata.png", shape: "OscaLata.png" },
+
+  // { name: "Sapito de antifaz", question: "¿Qué sapito con marcas faciales aparece aquí?", scientific: "(Batrachyla taeniata)", photo: "SapitoDeAntifaz.png", shape: "SapitoDeAntifaz.png" }
  // { name: "Ranita de Darwin", question: "¿Qué pequeña rana corresponde a esta silueta?", scientific: "(Rhinoderma darwinii)", photo: "RanitaDeDarwin.png", shape: "RanitaDeDarwin.png" },
  // { name: "Sapo esmeralda de la selva", question: "Piel suave. Extremidades muy largas y delgadas. Su color es verde esmeralda, con manchas cobrizas irregulares", scientific: "(Hylorina sylvatica)", photo: "RanaEsmeralda.png", shape: "RanaEsmeralda.png" },
  // { name: "Rana de hojarasca austral", question: "¿Qué anfibio del suelo del bosque aparece aquí?", scientific: "(Eupsophus calcaratus)", photo: "RanaDeHojarasca.png", shape: "RanaDeHojarasca.png" },
@@ -33,7 +35,9 @@ const animalDescriptions = {
   "Pudú": "Es el segundo más pequeño del mundo, alcanzando una altura de 30 a 40 cm",
   "Chucao": "Sus vuelos son sumamente cortos y bajos, utilizándolos solo para escapar de algún peligro",
   "Zorro chilote": "Es un cánido endémico de Chile y es considerado mundialmente uno de los mamíferos en mayor peligro de extinción",
-  "Hadita del bosque": "Presenta colores brillantes, cubierto de un vello dorado. Las hembras poseen pequeñas alas que les impiden volar ",
+  "Hadita del bosque": "Presenta colores brillantes, cubierto de un vello dorado. Las hembras poseen pequeñas alas que les impiden volar",
+  "Osca lata": "Las hembras de coliguacho son hematófagas, consumen sangre de mamíferos (humanos, vacas, caballos) para obtener proteínas que permiten el desarrollo de sus huevos",
+
   //"Sapito de antifaz": "Pequeño anfibio de bosque que recibe su nombre por las manchas oscuras alrededor de sus ojos."
   //"Sapo esmeralda de la selva": "Tamaño grande. Habita ambientes frecuentemente anegados con presencia de helechos y juncos",
   //"Rana moteada": "Anfibio pequeño de piel moteada que vive entre la hojarasca y la vegetación húmeda del bosque austral.",
