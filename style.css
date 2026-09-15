@@ -626,12 +626,12 @@ h2 {
 
     #game-screen h1,
     #final-screen h1 {
-        font-size: clamp(24px, 7vw, 34px);
+        font-size: clamp(16px, 7vw, 34px);
         letter-spacing: -1px;
     }
 
     #game-screen h2 {
-        font-size: clamp(18px, 5vw, 25px);
+        font-size: clamp(12px, 5vw, 25px);
         line-height: 1.2;
     }
 
@@ -643,8 +643,8 @@ h2 {
 
     #progress-bar::after {
         right: -9px;
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
         border-width: 2px;
     }
 
@@ -672,7 +672,7 @@ h2 {
     }
 
     #correct-animal {
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
     #correct-img {
@@ -683,7 +683,7 @@ h2 {
     }
 
     #correct-name {
-        margin: 18px 0 0;
+        margin: 12px 0 0;
         font-size: clamp(24px, 7vw, 35px);
         line-height: 1.1;
     }
@@ -694,7 +694,7 @@ h2 {
     }
 
     #nextBtn {
-        margin: 18px auto 0;
+        margin: 12px auto 0;
     }
 
     #final-screen {
