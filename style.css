@@ -414,10 +414,10 @@ h2 {
 }
 
 #photo-zoom-hint img {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     margin-right: 4px;
-    vertical-align: -3px;
+    vertical-align: -5px;
     object-fit: contain;
 }
 
