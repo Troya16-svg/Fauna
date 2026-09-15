@@ -124,7 +124,11 @@ h1 {
     font-size: 40px;
     line-height: 1;
     font-weight: Bold;
-    color:rgb(244, 152, 44);
+    color:rgb(233, 78, 27);
+}
+
+#game-screen #Title {
+    color: rgb(233, 78, 27) !important;
 }
 
 h2 {
@@ -313,6 +317,7 @@ h2 {
     }
 
     #welcome-screen {
+        position: relative;
         min-height: auto;
         grid-template-columns: 1fr;
         gap: 28px;
@@ -324,9 +329,12 @@ h2 {
     }
 
     .welcome-logo {
+        position: absolute;
+        top: 42px;
+        left: 12px;
         width: 64px;
         height: 64px;
-        margin-bottom: 18px;
+        z-index: 1;
     }
 
     .welcome-image {
@@ -335,7 +343,7 @@ h2 {
     }
 
     #welcome-screen h1 {
-        font-size: 45px;
+        font-size: 40px;
     }
 }
 
@@ -567,14 +575,14 @@ h2 {
     }
 
     #photo-controls {
-        top: auto;
-        bottom: max(24px, env(safe-area-inset-bottom));
+        top: 72px;
+        bottom: auto;
         gap: 10px;
         z-index: 2;
     }
 
     #photo-help {
-        bottom: 82px;
+        bottom: 24px;
         width: calc(100% - 32px);
         font-size: 14px;
         letter-spacing: 0;
@@ -626,12 +634,12 @@ h2 {
 
     #game-screen h1,
     #final-screen h1 {
-        font-size: clamp(16px, 7vw, 34px);
+        font-size: clamp(25px, 3.5vw, 20px);
         letter-spacing: -1px;
     }
 
     #game-screen h2 {
-        font-size: clamp(12px, 5vw, 25px);
+        font-size: clamp(25px, 5vw, 25px);
         line-height: 1.2;
     }
 
