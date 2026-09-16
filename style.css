@@ -307,7 +307,7 @@ h2 {
     content: "";
     position: absolute;
     inset: 0;
-    background: url("fotos/Welcomeimage.jpg") center / cover no-repeat;
+    background: url("fotos/Welcomeimage.png") center / cover no-repeat;
     filter: blur(5px);
     opacity: 0.1;
     z-index: -1;
