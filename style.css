@@ -4,7 +4,7 @@ body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #faf8db 0%, #d8d7d7 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #8b8b8b 100%);
     background-attachment: fixed;
     margin: 0;
     padding: 10px 10px 70px;
@@ -110,8 +110,8 @@ body::before {
     position: fixed;
     inset: 0;
     background:url("fotos/PagBackground.jpg") center / cover no-repeat;
-    display: blur(5px);
-    opacity: 10%;
+    display: blur(10px);
+    opacity: 15%;
     transform: scale(1.01);
     z-index: -1;
 }
@@ -134,7 +134,7 @@ h1 {
     font-size: 45px;
     line-height: 1;
     font-weight: Bold;
-    color:rgb(244, 152,44);
+    color:rgb(228, 133, 24);
 
 }
 
