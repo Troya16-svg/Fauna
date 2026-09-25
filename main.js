@@ -1,46 +1,70 @@
 // Lista de animales con nombre común + científico + foto + silueta
 const animalsData = [
-  { name: "Huillín", question: "¿A qué especie se le conoce como gato de río?", scientific: "(Lontra provocax)", photo: "Huillin.png", shape: "Huillin.png" },
-  { name: "Churrete", question: "¿Qué especie de ave es conocida por su activa digestión?", scientific: "(Cinclodes patagonicus)", photo: "Churrete.png", shape: "Churrete.png" },
-  { name: "Abejorro chileno", question: "¿Qué especie de insecto se encuentra entre los abejorro más grandes del mundo?", scientific: "(Bombus dahlbomii)", photo: "Abejorro.png", shape: "Abejorro.png" },
-  { name: "Garza grande", question: "¿Qué ave acuática está ampliamante distribuida en el mundo?", scientific: "(Ardea alba)", photo: "Garza.png", shape: "Garza.png" },
   { name: "Martín pescador", question: "¿Qué ave asociada a los ríos aparece aquí?", scientific: "(Megaceryle torquata)", photo: "MartinPescador.png", shape: "MartinPescador.png" },
-  { name: "Chuncho", question: "¿Cuál es el búho más pequeño de Chile?", scientific: "(Glaucidium nana)", photo: "Chuncho.png", shape: "Chuncho.png" },
-  { name: "Fío-fío", question: "¿Qué ave del bosque es conocida por migrar miles de kilómetros hasta la región amazónica?", scientific: "(Elaenia albiceps)", photo: "FioFio.png", shape: "FioFio.png" },
-  { name: "Coliguacho", question: "¿Qué insecto volador se alimenta de sangre?", scientific: "(Osca lata)", photo: "Coliguacho.png", shape: "Coliguacho.png" },
+  { name: "Garza grande", question: "¿Qué ave acuática está ampliamante distribuida en el mundo?", scientific: "(Ardea alba)", photo: "Garza.png", shape: "Garza.png" },
   { name: "Pilpilén", question: "¿Qué ave habita todo tipo de costas aunque prefiere las playas de arena?", scientific: "(Haematopus palliatus)", photo: "Pilpilen.png", shape: "Pilpilen.png" },
-  { name: "Pudú", question: "¿Cuál es el ciervo más pequeño de Chile?", scientific: "(Pudu puda)", photo: "Pudu.png", shape: "Pudu.png" },
   { name: "Chucao", question: "¿Qué ave del bosque prefiere correr y saltar por el suelo en lugar de volar?", scientific: "(Scelorchilus rubecula)", photo: "Chucao.png", shape: "Chucao.png" },
-  { name: "Zorro chilote", question: "¿Cuál es el zorro más pequeño de Chile?", scientific: "(Lycalopex fulvipes)", photo: "ZorroChilote.png", shape: "ZorroChilote.png" },
+  { name: "Chuncho", question: "¿Cuál es el búho más pequeño de Chile?", scientific: "(Glaucidium nana)", photo: "Chuncho.png", shape: "Chuncho.png" },
+  { name: "Churrete", question: "¿Qué especie de ave es conocida por su activa digestión?", scientific: "(Cinclodes patagonicus)", photo: "Churrete.png", shape: "Churrete.png" },
+  { name: "Fío-fío", question: "¿Qué ave del bosque es conocida por migrar miles de kilómetros hasta la región amazónica?", scientific: "(Elaenia albiceps)", photo: "FioFio.png", shape: "FioFio.png" },
+  { name: "Chorlo chileno", question: "¿Qué ave playera migratoria cambia su plumaje nupcial a un plumaje invernal?", scientific: "(Zonibyx modestus)", photo: "Chorlo chileno.png", shape: "Chorlo chileno.png" },
+  { name: "Gaviota cáhuil", question: "¿Qué gaviota migratoria cambia su característico capuchón negro en la época reproductiva que luego se vuelve completamente blanco en el invierno?", scientific: "(Chroicocephalus maculipennis)", photo: "Gaviota cáhuil.png", shape: "Gaviota cáhuil.png" },
+  // { name: "Cormorán yeco", question: "¿Qué ave acuática y buceadora es común verlas con las alas completamente abiertas para secarlas al sol o al viento?", scientific: "(Nannopterum brasilianum)", photo: "Cormorán yeco.png", shape: "Cormorán yeco.png" },
+  { name: "Abejorro chileno", question: "¿Qué especie de insecto se encuentra entre los abejorro más grandes del mundo?", scientific: "(Bombus dahlbomii)", photo: "Abejorro.png", shape: "Abejorro.png" },
+  { name: "Tábano o coliguacho", question: "¿Qué insecto volador se alimenta de sangre?", scientific: "(Osca lata)", photo: "Tábano o coliguacho.png", shape: "Tábano o coliguacho.png" },
   { name: "Hadita del bosque", question: "¿Qué insecto destaca por sus alas doradas con manchas oscuras que camina por el bosque?", scientific: "(Sphictostethus gravesii)", photo: "HaditaDelBosque.png", shape: "HaditaDelBosque.png" },
-
-  // { name: "Sapito de antifaz", question: "¿Qué sapito con marcas faciales aparece aquí?", scientific: "(Batrachyla taeniata)", photo: "SapitoDeAntifaz.png", shape: "SapitoDeAntifaz.png" }
- // { name: "Ranita de Darwin", question: "¿Qué pequeña rana corresponde a esta silueta?", scientific: "(Rhinoderma darwinii)", photo: "RanitaDeDarwin.png", shape: "RanitaDeDarwin.png" },
- // { name: "Sapo esmeralda de la selva", question: "Piel suave. Extremidades muy largas y delgadas. Su color es verde esmeralda, con manchas cobrizas irregulares", scientific: "(Hylorina sylvatica)", photo: "RanaEsmeralda.png", shape: "RanaEsmeralda.png" },
- // { name: "Rana de hojarasca austral", question: "¿Qué anfibio del suelo del bosque aparece aquí?", scientific: "(Eupsophus calcaratus)", photo: "RanaDeHojarasca.png", shape: "RanaDeHojarasca.png" },
-
+  { name: "Peorro", question: "¿Qué insecto al sentirse bajo amenaza expulsa un líquido de olor nauseabundo?", scientific: "(Ceroglossus magellanicus)", photo: "Peorro.png", shape: "Peorro.png" },
+  { name: "Grillo rojo chileno", question: "¿Qué insecto es similar a un grillo pero de aspecto compacto, robusto, de color rojo oscuro, que tiene espinas en sus patas posteriores y su mordedura es bastante dolorosa si se le manipula de forma incorrecta?", scientific: "(Cratomelus armatus)", photo: "Grillo rojo chileno.png", shape: "Grillo rojo chileno.png" },
+  { name: "Ciervo volante", question: "¿Qué insecto presenta mandíbulas gigantescas en forma de asta de ciervo?", scientific: "(Chiasognathus grantii)", photo: "Ciervo volante.png", shape: "Ciervo volante.png" },
+  { name: "Libélula o matapiojo azul", question: "¿Qué insecto volador es carnívoro y se desplaza a sectores secos y lejanos a su origen acuático?", scientific: "(Rhionaeschna diffinis)", photo: "Libélula o matapiojo azul.png", shape: "Libélula o matapiojo azul.png" },
+  { name: "Burrito o caballito de palo", question: "¿Qué escarabajo no volador posee un exoesquelo negro, robusto y duro, y además contiene un hocico o trompa prominente para alimentarse de vegetación?", scientific: "(Rhyephenes humeralis)", photo: "Burrito o caballito de palo.png", shape: "Burrito o caballito de palo.png" },
+  { name: "Avispa azul", question: "¿Qué tipo de avispa de tonalidades oscuras y metalizadas presenta un tipo de 'aguijón' o 'cola larga' que en realidad es un ovopositor alargado?", scientific: "(Dotocryptus bellicosus)", photo: "Avispa azul.png", shape: "Avispa azul.png" },
+  { name: "Típula", question: "¿¿Qué insecto volador tiene apariencia de zancudo pero en realidad son inofensivos y se alimentan de néctar?", scientific: "(Tipula sp.)", photo: "Típula.png", shape: "Típula.png" },
+  { name: "Zorro chilote", question: "¿Cuál es el zorro más pequeño de Chile?", scientific: "(Lycalopex fulvipes)", photo: "ZorroChilote.png", shape: "ZorroChilote.png" },
+  { name: "Pudú", question: "¿Cuál es el ciervo más pequeño de Chile?", scientific: "(Pudu puda)", photo: "Pudu.png", shape: "Pudu.png" },
+  { name: "Huillín", question: "¿A qué especie se le conoce como gato de río?", scientific: "(Lontra provocax)", photo: "Huillin.png", shape: "Huillin.png" },
+  { name: "Monito del monte", question: "¿Cómo se llama el pequeño marsupial que sobrevive a los meses fríos acumulando reservas de grasa en su cola prensil?", scientific: "(Dromiciops gliroides)", photo: "Monito del monte.png", shape: "Monito del monte" },
+  // { name: "Chungungo", question: "¿Qué mamífero marino es una de las nutrias más pequeñas del mundo y vive principalmente en costas rocosas?", scientific: "(Lontra felina)", photo: "Chungungo.png", shape: "Chungungo" },
+  // { name: "Quique", question: "¿Qué mustélido carnívoro se caracteriza por su mecanismo de defensa fétido?", scientific: "(Galictis cuja)", photo: "Quique.png", shape: "Quique" },
+  { name: "Güiña", question: "¿Cuál es el felino silvestre más pequeño de Sudamérica?", scientific: "(Leopardus guigna)", photo: "Güiña.png", shape: "Güiña" },
+  { name: "Comadrejita trompuda", question: "¿Qué pequeño marsupial de conducta fosorial se reconoce fácilmente por su hocico largo y puntiagudo, parecido a una pequeña trompa?", scientific: "(Rhyncholestes raphanurus)", photo: "Comadrejita trompuda.png", shape: "Comadrejita trompuda" },
+  // { name: "Ratón oliváceo", question: "¿Qué pequeño roedor tiene un pelaje de tonalidad olivácea y es común en distintos ambientes de Chile?", scientific: "(Abrothrix olivaceus)", photo: "Ratón oliváceo.png", shape: "Ratón oliváceo" },
+  { name: "Coipo", question: "¿Cuál es el roedor más grande que habita en Chile y está adaptado a la vida en el agua?", scientific: "(Myocastor coypus)", photo: "Coipo.png", shape: "Coipo" },
+  
 ];
 
 const animalDescriptions = {
-  "Huillín": "Es conocido por su agilidad para desplazarse a través de los cuerpos de agua del sur de Chile",
-  "Churrete": "Sus deposiciones son muy líquidas y frecuentes debido a su rápido metabolismo, dejando rastros al defecar continuamente",
-  "Abejorro chileno": "La reina del abejorro chileno es considerada uno de los insectos más grandes del mundo, pueden alcanzar hasta 3 cm de longitud. Se encuentra en peligro de extinción, por la presencia de especies exóticas y la destrucción de hábitat",
-  "Garza grande": "Habita en todos los continentes, excepto en la Antártica. Destaca por su plumaje completamente blanco y su gran tamaño",
   "Martín pescador": "El martín pescador es de color gris azulado en la cabeza, dorso y alas. Se alimenta en cursos de agua de todo tipo, corrientes o estancadas",
-  "Chuncho": "Esta ave es de hábitos diurnos y nocturnos, se alimenta de insectos, reptiles, roedores e incluso animales más grandes ",
-  "Fío-fío": "Al finalizar el verano emprende un viaje de miles de kilómetros hacia el norte, llegando a Perú, Brasil e incluso Colombia",
-  "Coliguacho": "Las hembras de coliguacho son hematófagas, consumen sangre de mamíferos (humanos, vacas, caballos) para obtener proteínas que permiten el desarrollo de sus huevos",
+  "Garza grande": "Habita en todos los continentes, excepto en la Antártica. Destaca por su plumaje completamente blanco y su gran tamaño",
   "Pilpilén": "Se distribuye desde Arica hasta Chiloé, y en menor número hasta Magallanes. Se alimenta de invertebrados marinos como almejas, choros, lapas y cangrejos",
-  "Pudú": "Es el segundo más pequeño del mundo, alcanzando una altura de 30 a 40 cm",
   "Chucao": "Sus vuelos son sumamente cortos y bajos, utilizándolos solo para escapar de algún peligro",
-  "Zorro chilote": "Es un cánido endémico de Chile y es considerado mundialmente uno de los mamíferos en mayor peligro de extinción",
-  "Hadita del bosque": "Presenta colores brillantes, cubierto de un vello dorado. Las hembras poseen pequeñas alas que les impiden volar",
+  "Chuncho": "Esta ave es de hábitos diurnos y nocturnos, se alimenta de insectos, reptiles, roedores e incluso animales más grandes ",
+  "Churrete": "Sus deposiciones son muy líquidas y frecuentes debido a su rápido metabolismo, dejando rastros al defecar continuamente",
+  "Fío-fío": "Al finalizar el verano emprende un viaje de miles de kilómetros hacia el norte, llegando a Perú, Brasil e incluso Colombia",
+  "Chorlo chileno": "El chorlo chileno nidifica en la Patagonia y Tierra del Fuego, y durante los meses de invierno migra miles de kilómetros hacia el norte de Chile, transformando su coloración de pecho anaranjado y banda negra, a un tono más parduzco y gris en el proceso.",
+  "Gaviota cáhuil": "La gaviota caáhuil durante el verano nidifica en humedales australes del centro sur de Chile y Argentina, y en invierno migra hacia el norte mudando su plumaje para lucir una cabeza blanca con un parche negro en la zona auricular.",
+  "Cormorán yeco": "El cormorán yeco se distribuye tanto en la costa marina como en ríos y lagos interiores. Se alimenta buceando, lo que provoca que su plumaje se empape de agua, por esta razón es común verlo posado con las alas abiertas para secarlas.",
+  "Abejorro chileno": "La reina del abejorro chileno es considerada uno de los insectos más grandes del mundo, pueden alcanzar hasta 3 cm de longitud. Se encuentra en peligro de extinción, por la presencia de especies exóticas y la destrucción de su hábitat.",
+  "Tábano o coliguacho": "Las hembras de coliguacho son hematófagas, consumen sangre de mamíferos (ej: humanos, vacas, caballos) para obtener proteínas que permiten el desarrollo de sus huevos.",
+  "Hadita del bosque": "Presenta colores brillantes, cubierto de un vello dorado. Las alas de las hembras son pequeñas por lo cual no pueden volar.",
+  "Peorro": "Su mecanismo de defensa en la expulsión de un líquido maloliente e irritante desde sus glándulas perianales para ahuyentar a los depredadores.",
+  "Grillo rojo chileno": "El grillo rojo a pesar de su nombre no pertenece a la familia Gryllidae, si no a la famila Anostostomatidae, siendo considerado un auténtico fósil viviente. Es uno de los ortópteros más grandes y fuertes en su área de distribución.",
+  "Ciervo volante": "Los machos tienen mandíbulas de mayor tamaño en comparación con las hembras.",
+  "Libélula o matapiojo azul": "El matapiojos azul es común de observar en ambientes secos y lejanos del agua. Posee ojos grandes para buscar su alimento (otros insectos). La forma larvaria se desarrolla en aguas lénticas y lagunas, y emerge hacia una vida aérea como adulto.",
+  "Burrito o caballito de palo": "El burrito es un coleóptero que se aferra fuertemente sobre la madera o corteza de los árboles. Este insecto es fitófago (herbívoro) y los adultos consumen principalmente brotes y hojas.",
+  "Avispa azul": "La avispa azul es una especie de avispa parasitoide nativa. Lo que parece un aguijón peligroso en realidad es un ovopositor alargado, las hembras lo utiizan para poner huevos y no para picar.",
+  "Típula": "Las típulas son insectos inofensivos de patas largas y cuerpo grande que habitan zonas húmedas. Tienen un aparato bucal para consumir precisamente néctar.",
+  "Zorro chilote": "El zorro de Chiloé es un cánido endémico de Chile y es considerado mundialmente uno de los mamíferos en mayor peligro de extinción.",
+  "Pudú": "Es el segundo más pequeño del mundo, alcanzando una altura de 30 a 40 cm.",
+  "Huillín": "Es conocido por su agilidad para desplazarse a través de los cuerpos de agua del sur de Chile.",
+  "Monito del monte": "El monito del monte es un pequeño marsupial arborícola que habita los bosques templados del sur de Chile y Argentina. Durante los meses más fríos entra en un profundo estado de letargo o hibernación para sobrevivir.",
+  "Chungungo": "El chungungo es una pequeña nutria marina que habita principalmente en litorales rocosos expuestos. Posee patas con membranas interdigitales y se alimenta preferentemente de crustáceos, peces y moluscos.",
+  "Quique": "El quique tiene un cuerpo alargado y cola corta, se distingue especialmente por una franja blanca que atraviesa su cabeza hasta el cuello. Posee glándulas cerca del ano que secretan un líquido de olor muy fuerte, de forma similar a los zorrillos.",
+  "Güiña": "La güiña es el felino más pequeño de Sudamérica. Pesa aproximadamente entre 1,8 y 2,5 kg, tiene pelaje café con pequeñas manchas y una cola corta y gruesa. También existen ejemplares melánicos.",
+  "Comadrejita trompuda": "La comadrejita trompuda es un pequeño marsupial de pelaje café oscuro, gris o casi negro. Su característica más llamativa es el hocico largo, estrecho y puntiagudo, semejante a una pequeña trompa.",
+  "Ratón oliváceo": "El ratón oliváceo es un pequeño roedor nativo de Chile, reconocible por su coloración pardo-olivácea. Es una especie de amplia distribución y puede encontrarse en diversos ambientes, donde se alimenta de semillas, frutos e invertebrados.",
+  "Coipo": "El coipo vive en ríos, lagos, esteros y humedales. Posee patas traseras con membranas interdigitales y una cola larga y cilíndrica que facilitan la natación .",
 
-  //"Sapito de antifaz": "Pequeño anfibio de bosque que recibe su nombre por las manchas oscuras alrededor de sus ojos."
-  //"Sapo esmeralda de la selva": "Tamaño grande. Habita ambientes frecuentemente anegados con presencia de helechos y juncos",
-  //"Rana moteada": "Anfibio pequeño de piel moteada que vive entre la hojarasca y la vegetación húmeda del bosque austral.",
-  //"Rana de hojarasca austral": "Rana terrestre que se refugia bajo hojas y troncos húmedos. Su canto se escucha en los bosques del sur.",
-  //"Ranita de Darwin": "Pequeña rana del bosque nativo. El macho protege a sus crías transportándolas dentro de su saco vocal.",
 };
 
 const animalCategories = {
@@ -56,7 +80,21 @@ const animalCategories = {
   "Pudú": "Mamiferos",
   "Chucao": "Aves",
   "Zorro chilote": "Mamiferos",
-  "Hadita del bosque": "Insectos"
+  "Hadita del bosque": "Insectos",
+  "Chorlo chileno": "Aves",
+  "Gaviota cáhuil": "Aves",
+  "Peorro": "Insectos",
+  "Grillo rojo chileno": "Insectos",
+  "Ciervo volante": "Insectos",
+  "Libélula o matapiojo azul": "Insectos",
+  "Burrito o caballito de palo": "Insectos",
+  "Avispa azul": "Insectos",
+  "Típula": "Insectos",
+  "Tábano o coliguacho": "Insectos",
+  "Monito del monte": "Mamiferos",
+  "Güiña": "Mamiferos",
+  "Comadrejita trompuda": "Mamiferos",
+  "Coipo": "Mamiferos"
 };
 
 const categoryOptions = {
@@ -90,7 +128,21 @@ const animalOptionPhotos = {
   "Pudú": "Pudu.png",
   "Chucao": "Chucao.png",
   "Zorro chilote": "Zorro chilote.png",
-  "Hadita del bosque": "Hadita del bosque.png"
+  "Hadita del bosque": "Hadita del bosque.png",
+  "Chorlo chileno": "Chorlo-chileno.png",
+  "Gaviota cáhuil": "Gaviota cáhuil.png",
+  "Peorro": "Peorro.png",
+  "Grillo rojo chileno": "Grillo rojo chileno.png",
+  "Ciervo volante": "Ciervo volante.png",
+  "Libélula o matapiojo azul": "Libélula o matapiojo azul.png",
+  "Burrito o caballito de palo": "Burrito o caballito-de-palo.png",
+  "Avispa azul": "Avispa azul.png",
+  "Típula": "Típula.png",
+  "Tábano o coliguacho": "Tábano o coliguacho.png",
+  "Monito del monte": "Monito del monte.png",
+  "Güiña": "Güiña.png",
+  "Comadrejita trompuda": "Comadrejita trompuda.png",
+  "Coipo": "Coipo.png"
 };
 
 const animalFullPhotos = {
@@ -106,7 +158,21 @@ const animalFullPhotos = {
   "Pudú": "Pudú.png",
   "Chucao": "Chucao.png",
   "Zorro chilote": "Zorro chilote.png",
-  "Hadita del bosque": "Hadita del bosque.png"
+  "Hadita del bosque": "Hadita del bosque.png",
+  "Chorlo chileno": "Chorlo chileno.png",
+  "Gaviota cáhuil": "Gaviota Cahuil.png",
+  "Peorro": "Peorro.png",
+  "Grillo rojo chileno": "Grillo rojo chileno.png",
+  "Ciervo volante": "Ciervo volante.png",
+  "Libélula o matapiojo azul": "Libélula o matapiojo azul.png",
+  "Burrito o caballito de palo": "Burrito.png",
+  "Avispa azul": "Avispa azul.png",
+  "Típula": "Típula.png",
+  "Tábano o coliguacho": "Tábano o coliguacho.png",
+  "Monito del monte": "Monito del monte.png",
+  "Güiña": "Güiña.png",
+  "Comadrejita trompuda": "Comadrejita trompuda.png",
+  "Coipo": "Coipo.png"
 };
 
 let score = 0;
@@ -354,7 +420,20 @@ function checkAnswer(selected) {
 
     document.getElementById("correct-name").innerText = animal.name;
     document.getElementById("correct-scientific").innerText = animal.scientific;
-    photoHelp.innerText = animalDescriptions[animal.name];
+    photoHelp.innerHTML = "";
+
+    const commonName = document.createElement("strong");
+    commonName.textContent = animal.name;
+
+    const scientificName = document.createElement("em");
+    scientificName.textContent = ` ${animal.scientific}`;
+
+    const description = document.createElement("span");
+    description.className = "photo-description";
+    description.textContent = animalDescriptions[animal.name] || "";
+
+    photoHelp.append(commonName, document.createElement("br"));
+    photoHelp.append(scientificName, description);
 
     document.getElementById("correct-img").classList.add("correct-zoom");
 
