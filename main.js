@@ -43,6 +43,72 @@ const animalDescriptions = {
   //"Ranita de Darwin": "Pequeña rana del bosque nativo. El macho protege a sus crías transportándolas dentro de su saco vocal.",
 };
 
+const animalCategories = {
+  "Huillín": "Mamiferos",
+  "Churrete": "Aves",
+  "Abejorro chileno": "Insectos",
+  "Garza grande": "Aves",
+  "Martín pescador": "Aves",
+  "Chuncho": "Aves",
+  "Fío-fío": "Aves",
+  "Coliguacho": "Insectos",
+  "Pilpilén": "Aves",
+  "Pudú": "Mamiferos",
+  "Chucao": "Aves",
+  "Zorro chilote": "Mamiferos",
+  "Hadita del bosque": "Insectos"
+};
+
+const categoryOptions = {
+  Aves: [
+    "Chorlo-chileno.png", "Chucao.png", "Chuncho.png", "Churrete.png",
+    "Fío-Fío.png", "Garza grande.png", "Gaviota cáhuil.png",
+    "Martín pescador.png", "Pilpilén.png"
+  ],
+  Insectos: [
+    "Abejorro chileno.png", "Avispa azul.png", "Burrito o caballito-de-palo.png",
+    "Ciervo volante.png", "Grillo rojo chileno.png", "Hadita del bosque.png",
+    "Libélula o matapiojo azul.png", "Peorro.png", "Tábano o coliguacho.png",
+    "Típula.png"
+  ],
+  Mamiferos: [
+    "Comadrejita trompuda.png", "Güiña.png", "Huillin.png", "Monito del monte.png",
+    "Pudu.png", "Zorro chilote.png"
+  ]
+};
+
+const animalOptionPhotos = {
+  "Huillín": "Huillin.png",
+  "Churrete": "Churrete.png",
+  "Abejorro chileno": "Abejorro chileno.png",
+  "Garza grande": "Garza grande.png",
+  "Martín pescador": "Martín pescador.png",
+  "Chuncho": "Chuncho.png",
+  "Fío-fío": "Fío-Fío.png",
+  "Coliguacho": "Tábano o coliguacho.png",
+  "Pilpilén": "Pilpilén.png",
+  "Pudú": "Pudu.png",
+  "Chucao": "Chucao.png",
+  "Zorro chilote": "Zorro chilote.png",
+  "Hadita del bosque": "Hadita del bosque.png"
+};
+
+const animalFullPhotos = {
+  "Huillín": "Huillín.png",
+  "Churrete": "Churrete.png",
+  "Abejorro chileno": "Abejorro chileno.png",
+  "Garza grande": "Garza grande.png",
+  "Martín pescador": "Martín pescador.png",
+  "Chuncho": "Chuncho.png",
+  "Fío-fío": "Fío-Fío.png",
+  "Coliguacho": "Tábano o coliguacho.png",
+  "Pilpilén": "Pilpilén.png",
+  "Pudú": "Pudú.png",
+  "Chucao": "Chucao.png",
+  "Zorro chilote": "Zorro chilote.png",
+  "Hadita del bosque": "Hadita del bosque.png"
+};
+
 let score = 0;
 let errors = 0;
 let current = 0;
@@ -108,8 +174,9 @@ function closePhotoZoom() {
 }
 
 document.getElementById("correct-photo-btn").onclick = () => {
-  zoomedPhoto.src = document.getElementById("correct-img").src;
-  zoomedPhoto.alt = document.getElementById("correct-img").alt;
+  const correctImage = document.getElementById("correct-img");
+  zoomedPhoto.src = correctImage.dataset.fullSrc || correctImage.src;
+  zoomedPhoto.alt = correctImage.alt;
   resetPhotoZoom();
   photoModal.classList.remove("hidden");
   document.getElementById("close-photo-btn").focus();
@@ -165,14 +232,19 @@ function generateAnimals() {
     .sort(() => Math.random() - 0.5)
     .slice(0, MAX_ANIMALS_PER_GAME)
     .map(animal => {
-    const silhouette = `siluetas/${animal.shape}`;
-    const correct = `fotos/${animal.photo}`;
+    const category = animalCategories[animal.name];
+    const optionPhoto = animalOptionPhotos[animal.name];
+    const silhouette = `siluetas/${category}/${optionPhoto}`;
+    const correct = `fotos/${category}/${optionPhoto}`;
+    const fullPhoto = animalFullPhotos[animal.name]
+      ? `FotosFull/${category}/${animalFullPhotos[animal.name]}`
+      : correct;
 
-    const distractors = animalsData
-      .filter(a => a.name !== animal.name)
+    const distractors = categoryOptions[category]
+      .filter(photo => photo !== optionPhoto)
       .sort(() => Math.random() - 0.5)
-      .slice(0, 4)
-      .map(a => `fotos/${a.photo}`);
+      .slice(0, 3)
+      .map(photo => `fotos/${category}/${photo}`);
 
     return {
       name: animal.name,
@@ -180,6 +252,7 @@ function generateAnimals() {
       scientific: animal.scientific,
       silhouette,
       correct,
+      fullPhoto,
       options: [correct, ...distractors].sort(() => Math.random() - 0.5)
     };
     });
@@ -228,6 +301,7 @@ function loadAnimal() {
   const animal = animals[current];
   answerLocked = false;
   closePhotoZoom();
+  document.getElementById("message").classList.remove("feedback-incorrect");
 
   document.getElementById("question").innerText = animal.question;
 
@@ -276,6 +350,7 @@ function checkAnswer(selected) {
     document.getElementById("message").style.color = "#096c00";
 
     document.getElementById("correct-img").src = animal.correct;
+    document.getElementById("correct-img").dataset.fullSrc = animal.fullPhoto;
 
     document.getElementById("correct-name").innerText = animal.name;
     document.getElementById("correct-scientific").innerText = animal.scientific;
@@ -294,11 +369,15 @@ function checkAnswer(selected) {
     errors++;
     document.getElementById("message").innerText = "Incorrecto!";
     document.getElementById("message").style.color = "#f70808a1";
+    document.getElementById("message").classList.add("feedback-incorrect");
+
+    document.getElementById("silhouette-card").style.display = "none";
+    document.getElementById("options").style.display = "none";
 
     setTimeout(() => {
       current++;
       loadAnimal();
-    }, 700);
+    }, 1500);
   }
 }
 

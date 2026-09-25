@@ -266,7 +266,17 @@ h2 {
     font-size: 50px;
     margin-top: 20px;
     font-weight: bold;
-    
+}
+
+.feedback-incorrect {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    font-size: clamp(42px, 8vw, 76px);
+    white-space: nowrap;
 }
 
 /* ======== BOTÓN SIGUIENTE ======== */
@@ -667,8 +677,8 @@ h2 {
 
     #game-screen h1,
     #final-screen h1 {
-        font-size: clamp(25px, 3.5vw, 20px);
-        letter-spacing: -1px;
+        font-size: clamp(20px, 6vw, 32px);
+        letter-spacing: 0;
     }
 
     #game-screen .Subtitle {
@@ -721,6 +731,11 @@ h2 {
     #message {
         margin: 14px 0;
         font-size: clamp(28px, 9vw, 42px);
+    }
+
+    .feedback-incorrect {
+        margin: 0;
+        font-size: clamp(36px, 12vw, 58px);
     }
 
     #correct-animal {
