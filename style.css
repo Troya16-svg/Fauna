@@ -462,7 +462,7 @@ h2 {
     grid-template-rows: 1fr auto;
     justify-content: center;
     align-items: center;
-    column-gap: 4px;
+    column-gap: 20px;
     row-gap: 0;
     padding: 30px;
     background: linear-gradient(rgba(0, 0, 0, 0.95), rgba(8, 8, 8, 0.95));
@@ -688,6 +688,8 @@ h2 {
     }
 
     #photo-help {
+        grid-column: 1;
+        grid-row: 2;
         position: static;
         width: calc(100% - 32px);
         max-height: none;
