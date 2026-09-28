@@ -339,7 +339,7 @@ h2 {
 }
 
 @media (max-width: 760px) {
-    body {
+   body {
         padding: 8px 18px;
     }
 
@@ -365,7 +365,9 @@ h2 {
     }
 
     .welcome-image {
-        min-height: 38vh;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        min-height: 0;
         order: -1;
     }
 
@@ -419,6 +421,8 @@ h2 {
 }
 
 #correct-photo-btn {
+    display: block;
+    margin: 0 auto;
     padding: 0;
     border: 0;
     background: transparent;
@@ -535,6 +539,8 @@ h2 {
 }
 
 #photo-help {
+    grid-column: 2;
+    grid-row: 1;
     position: static;
     pointer-events: none;
     width: min(28vw, 360px);
@@ -550,19 +556,31 @@ h2 {
     color:rgb(255, 255, 255);
     text-align: left;
     white-space: pre-line;
-    transform: translateX(-500px);
+    transform: translateX(-min(30vw, 400px));
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-#photo-help em {
-    font-size: 0.7em;
-}
-
-.photo-description {
+#photo-help .photo-name,
+#photo-help .photo-scientific,
+#photo-help .photo-description {
     display: block;
-    margin-top: 8px;
 }
 
+#photo-help .photo-name {
+    color: rgb(100, 178, 134);
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+#photo-help .photo-scientific {
+    margin-top: 4px;
+    font-size: 0.7em;
+    color: rgb(100, 178, 134);
+}
+
+#photo-help .photo-description {
+    margin-top: 18px;
+}
 #photo-controls button {
     min-width: 44px;
     height: 40px;
@@ -594,6 +612,23 @@ h2 {
     font-weight: light;
     margin-top: -40px;
     color:rgb(0, 0, 0);
+}
+
+/* ======== Animation Animal ======== */
+
+.correct-zoom {
+    animation: zoomIn 0.4s ease forwards;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.25);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* ======== Animation Animal ======== */

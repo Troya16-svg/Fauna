@@ -423,17 +423,18 @@ function checkAnswer(selected) {
     photoHelp.innerHTML = "";
 
     const commonName = document.createElement("strong");
+    commonName.className = "photo-name";
     commonName.textContent = animal.name;
 
     const scientificName = document.createElement("em");
+    scientificName.className = "photo-scientific";
     scientificName.textContent = ` ${animal.scientific}`;
 
     const description = document.createElement("span");
     description.className = "photo-description";
     description.textContent = animalDescriptions[animal.name] || "";
 
-    photoHelp.append(commonName, document.createElement("br"));
-    photoHelp.append(scientificName, description);
+    photoHelp.append(commonName, scientificName, description);
 
     document.getElementById("correct-img").classList.add("correct-zoom");
 
